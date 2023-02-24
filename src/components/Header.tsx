@@ -14,7 +14,11 @@ export const Header: React.FC<{
 
   return (
     <div className="mb-5 flex">
-      <GoBold size={'2em'} onClick={handleClick} />
+      <GoBold
+        size={'2em'}
+        onClick={handleClick}
+        className="pointer-events-auto"
+      />
       <div className="ml-auto flex">
         <SiGmail size={'2em'} color={'red'} />
         <AiOutlineLinkedin size={'2em'} />

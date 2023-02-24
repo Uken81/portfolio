@@ -4,7 +4,6 @@ export type DemoImage = 'gccm' | 'garden';
 
 export const Demo: React.FC<{ demoImage: string }> = ({ demoImage }) => {
   let image;
-  console.log('img', image);
   switch (demoImage) {
     case 'gccm':
       image = test;
@@ -12,5 +11,16 @@ export const Demo: React.FC<{ demoImage: string }> = ({ demoImage }) => {
     case 'garden':
       image = gardenGif;
   }
-  return demoImage !== '' ? <img src={image} className="max-h-80"></img> : null;
+  console.log('img', image);
+  //leave below until i know that a transform transition cant occur on render.
+  // return demoImage !== '' ? (
+  //   <img
+  //     src={image}
+  //     className="max-h-80 transform transition-transform hover:scale-125"></img>
+  // ) : null;
+  return (
+    <img
+      src={image}
+      className="max-h-80 transform transition-transform duration-500 hover:scale-150"></img>
+  );
 };

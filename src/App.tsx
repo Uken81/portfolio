@@ -9,7 +9,7 @@ function App() {
   const [messageType, setMessageType] = useState('welcome');
   const [demoImage, setDemoImage] = useState('');
   const closeDemo = () => {
-    setDemoImage('welcome');
+    setDemoImage('');
   };
 
   return (
