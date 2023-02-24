@@ -13,15 +13,19 @@ export const Header: React.FC<{
   };
 
   return (
-    <div className="mb-5 flex">
+    <div className="mb-5 flex justify-between hover:pointer-events-auto">
       <GoBold
         size={'2em'}
         onClick={handleClick}
-        className="pointer-events-auto"
+        className="hover:cursor-pointer"
       />
-      <div className="ml-auto flex">
-        <SiGmail size={'2em'} color={'red'} />
-        <AiOutlineLinkedin size={'2em'} />
+      <div className="ml-auto flex ">
+        <a href="mailto:brendanhurd@gmail.com">
+          <SiGmail size={'2em'} color={'red'} className="mr-2" />
+        </a>
+        <a href="https://www.linkedin.com/in/brendan-hurd-36b211259/">
+          <AiOutlineLinkedin size={'2em'} className="mr-2" />
+        </a>
         <a href="https://github.com/Uken81">
           <GoMarkGithub size={'2em'} />
         </a>
