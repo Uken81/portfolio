@@ -7,9 +7,9 @@ import './style.css';
 function App() {
   const [messageName, setMessageName] = useState('');
   return (
-    <div className="flex p-10">
-      <div className="border-red-500 border-opacity-10">
-        <Header setMessageName={setMessageName} />
+    <div className="p-80">
+      <Header setMessageName={setMessageName} />
+      <div className="flex flex-row">
         <MainMessage messageName={messageName} />
         <Projects setMessageName={setMessageName} />
       </div>
