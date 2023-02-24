@@ -5,13 +5,13 @@ import { Projects } from './components/Projects';
 import './style.css';
 
 function App() {
-  const [messageName, setMessageName] = useState('');
+  const [messageType, setMessageType] = useState('welcome');
   return (
     <div className="p-80">
-      <Header setMessageName={setMessageName} />
+      <Header setMessageType={setMessageType} />
       <div className="flex flex-row">
-        <MainMessage messageName={messageName} />
-        <Projects setMessageName={setMessageName} />
+        <MainMessage messageType={messageType} />
+        <Projects setMessageType={setMessageType} />
       </div>
     </div>
   );
