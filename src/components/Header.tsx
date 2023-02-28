@@ -17,7 +17,7 @@ export const Header: React.FC<{
       <AiTwotoneHome
         size={'2em'}
         onClick={handleClick}
-        className="hover:cursor-pointer "
+        className="hover:cursor-pointer"
         color="white"
       />
       <div className="ml-auto flex ">

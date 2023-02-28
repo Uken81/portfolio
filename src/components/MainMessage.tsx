@@ -39,35 +39,42 @@ export const MainMessage: React.FC<{
       setDemoImage(message.links.demo);
     }
   };
+
   const Message = (props: {
     title: string;
     text: string;
     links?: { site: string; github: string; demo: string };
   }) => (
     <div className="flex flex-col">
-      <h1 className="mb-5 bg-gradient-to-r from-sky-500 to-indigo-500 text-6xl">
-        {props.title}
-      </h1>
-      <span className="max-w-lg border-l-4 pl-2 text-gray-400">
-        {props.text}
-      </span>
-      {message.links && (
-        <div className="flex max-w-sm justify-between">
-          <a
-            href={message.links?.site}
-            target="_blank"
-            rel="noopener noreferrer">
-            View Site
-          </a>
-          <a
-            href={message.links?.github}
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub
-          </a>
-          <span onClick={handleClick}>Demo</span>
+      <div className="mb-10 rounded-r rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 text-center">
+        <h1 className="p-3 text-6xl">{props.title}</h1>
+      </div>
+      <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
+        <div className="ml-2 bg-gray-900 pl-4">
+          <span>{props.text}</span>
         </div>
-      )}
+
+        {message.links && (
+          <div className="ml-2 max-w-lg bg-gray-900 pt-4 pl-4">
+            <a
+              href={message.links?.site}
+              target="_blank"
+              rel="noopener noreferrer">
+              View Site
+            </a>
+            <a
+              href={message.links?.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pl-8">
+              GitHub
+            </a>
+            <span onClick={handleClick} className="pl-8 hover:cursor-pointer">
+              Demo
+            </span>
+          </div>
+        )}
+      </div>
     </div>
   );
 
