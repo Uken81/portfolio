@@ -65,7 +65,7 @@ export const MainMessage: React.FC<{
                   href={message.links?.site}
                   target="_blank"
                   rel="noopener noreferrer">
-                  <span className="mb-0.5 bg-gray-900 hover:cursor-pointer">
+                  <span className="duration-300 hover:text-white">
                     View Site
                   </span>
                 </a>
@@ -77,16 +77,18 @@ export const MainMessage: React.FC<{
                   href={props.links?.github}
                   target="_blank"
                   rel="noopener noreferrer">
-                  <span>GitHub</span>
+                  <span className="duration-300 hover:text-white">GitHub</span>
                 </a>
               </div>
             </div>
-            <div className="ml-8 max-h-fit bg-gradient-to-r from-sky-500  to-indigo-500 ">
-              <p
-                onClick={handleClick}
-                className="mb-0.5 bg-gray-900 hover:cursor-pointer">
-                Demo
-              </p>
+            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500">
+              <div className="mb-0.5 bg-gray-900">
+                <p
+                  onClick={handleClick}
+                  className="duration-300 hover:cursor-pointer hover:text-white">
+                  Demo
+                </p>
+              </div>
             </div>
           </div>
         )}

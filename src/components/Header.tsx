@@ -17,18 +17,30 @@ export const Header: React.FC<{
       <AiTwotoneHome
         size={'2em'}
         onClick={handleClick}
-        className="hover:cursor-pointer"
+        className="duration-300 hover:scale-125 hover:cursor-pointer"
         color="white"
       />
       <div className="ml-auto flex ">
         <a href="mailto:brendanhurd@gmail.com">
-          <SiGmail size={'2em'} color={'white'} className="mr-2" />
+          <SiGmail
+            size={'2em'}
+            color={'white'}
+            className="mr-2 duration-300 hover:scale-125"
+          />
         </a>
         <a href="https://www.linkedin.com/in/brendan-hurd-36b211259/">
-          <AiOutlineLinkedin size={'2em'} className="mr-2" color={'white'} />
+          <AiOutlineLinkedin
+            size={'2em'}
+            className="mr-2 duration-300 hover:scale-125"
+            color={'white'}
+          />
         </a>
         <a href="https://github.com/Uken81">
-          <GoMarkGithub size={'2em'} color={'white'} />
+          <GoMarkGithub
+            size={'2em'}
+            className="mr-2 duration-300 hover:scale-125"
+            color={'white'}
+          />
         </a>
       </div>
     </div>
