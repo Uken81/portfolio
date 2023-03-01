@@ -47,13 +47,13 @@ export const MainMessage: React.FC<{
     links?: { site: string; github: string; demo: string };
   }) => (
     <div className="flex flex-col">
-      <div className="mb-10">
+      <div className="mb-10 cursor-default">
         <h1 className="bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text p-3 text-6xl font-extrabold text-transparent">
           {props.title}
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 bg-gray-900 pl-4">
+        <div className="ml-2 cursor-default bg-gray-900 pl-4">
           <span>{props.text}</span>
         </div>
 

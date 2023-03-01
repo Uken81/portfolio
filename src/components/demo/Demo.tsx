@@ -1,4 +1,4 @@
-import test from '../../assets/demoImages/test.png';
+import test from '../../assets/demoImages/test.gif';
 import gardenGif from '../../assets/demoImages/gardenManagerDemo.gif';
 export type DemoImage = 'gccm' | 'garden';
 
