@@ -1,6 +1,6 @@
 export const MainMessage: React.FC<{
   messageType: string;
-  setDemoImage: React.Dispatch<React.SetStateAction<string>>;
+  setDemoImage: React.Dispatch<React.SetStateAction<string | null>>;
 }> = ({ messageType, setDemoImage }) => {
   const messages: {
     [key: string]: {
@@ -85,7 +85,7 @@ export const MainMessage: React.FC<{
               <div className="mb-0.5 bg-gray-900">
                 <p
                   onClick={handleClick}
-                  className="duration-300 hover:cursor-pointer hover:text-white">
+                  className="cursor-pointer duration-300 hover:text-white">
                   Demo
                 </p>
               </div>
