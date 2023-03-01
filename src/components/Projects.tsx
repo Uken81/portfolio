@@ -7,19 +7,25 @@ export const Projects: React.FC<{
     closeDemo();
   };
   return (
-    <div className="max-w-1 ml-auto mr-8 max-h-20 rounded-l bg-gradient-to-r from-sky-500 to-indigo-500">
+    <div className="ml-auto mr-8 max-h-20 rounded-l bg-gradient-to-r from-sky-500 to-indigo-500">
       <div className="mt-2 ml-2 flex  h-52 flex-col justify-between bg-gray-900 p-10 text-gray-400">
-        <h1 className="mb-2 text-3xl">Projects</h1>
-        <span
-          onClick={() => handleClick('gccm')}
-          className="hover:cursor-pointer">
-          GCCM
-        </span>
-        <span
-          onClick={() => handleClick('garden')}
-          className="hover:cursor-pointer">
-          Garden Logger
-        </span>
+        <h1 className="mb-2 bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-3xl font-extrabold text-transparent">
+          Projects
+        </h1>
+        <div className="max-w-fit bg-gradient-to-br from-sky-500 to-indigo-500">
+          <p
+            onClick={() => handleClick('gccm')}
+            className="mb-0.5 bg-gray-900 hover:cursor-pointer">
+            GCCM
+          </p>
+        </div>
+        <div className="max-w-fit bg-gradient-to-br from-sky-500 to-indigo-500">
+          <p
+            onClick={() => handleClick('garden')}
+            className="mb-0.5 bg-gray-900 hover:cursor-pointer">
+            Garden Logger
+          </p>
+        </div>
       </div>
     </div>
   );

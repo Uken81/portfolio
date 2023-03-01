@@ -9,6 +9,7 @@ export const MainMessage: React.FC<{
       links?: { site: string; github: string; demo: string };
     };
   } = {
+    //export below object to its own file??
     gccm: {
       title: 'GCCM',
       text: 'Aliqua sunt culpa irure anim. Anim magna aliquip officia in ullamco non laborum laboris ullamco dolore ex. Reprehenderit nostrud duis consequat nisi enim ex sint ipsum laboris. Anim et ea duis veniam aute irure quis in. Exercitation quis eu consequat aliquip ut pariatur enim irure labore.',
@@ -46,8 +47,10 @@ export const MainMessage: React.FC<{
     links?: { site: string; github: string; demo: string };
   }) => (
     <div className="flex flex-col">
-      <div className="mb-10 rounded-r rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 text-center">
-        <h1 className="p-3 text-6xl">{props.title}</h1>
+      <div className="mb-10">
+        <h1 className="bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text p-3 text-6xl font-extrabold text-transparent">
+          {props.title}
+        </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
         <div className="ml-2 bg-gray-900 pl-4">
@@ -55,23 +58,36 @@ export const MainMessage: React.FC<{
         </div>
 
         {message.links && (
-          <div className="ml-2 max-w-lg bg-gray-900 pt-4 pl-4">
-            <a
-              href={message.links?.site}
-              target="_blank"
-              rel="noopener noreferrer">
-              View Site
-            </a>
-            <a
-              href={message.links?.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pl-8">
-              GitHub
-            </a>
-            <span onClick={handleClick} className="pl-8 hover:cursor-pointer">
-              Demo
-            </span>
+          <div className="ml-2 flex max-w-lg bg-gray-900 pt-4 pl-4">
+            <div className="ml-4 bg-gradient-to-r from-sky-500 to-indigo-500">
+              <div className="mb-0.5 bg-gray-900">
+                <a
+                  href={message.links?.site}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <span className="mb-0.5 bg-gray-900 hover:cursor-pointer">
+                    View Site
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500">
+              <div className="mb-0.5 bg-gray-900">
+                <a
+                  href={props.links?.github}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+            <div className="ml-8 max-h-fit bg-gradient-to-r from-sky-500  to-indigo-500 ">
+              <p
+                onClick={handleClick}
+                className="mb-0.5 bg-gray-900 hover:cursor-pointer">
+                Demo
+              </p>
+            </div>
           </div>
         )}
       </div>

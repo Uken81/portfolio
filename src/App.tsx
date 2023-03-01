@@ -8,6 +8,7 @@ import './style.css';
 function App() {
   const [messageType, setMessageType] = useState('welcome');
   const [demoImage, setDemoImage] = useState('');
+  //remove function and use state setter instead?
   const closeDemo = () => {
     setDemoImage('');
   };
@@ -19,7 +20,7 @@ function App() {
         <div className="flex justify-center p-16">
           <Demo demoImage={demoImage} />
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center">
           <MainMessage messageType={messageType} setDemoImage={setDemoImage} />
           <Projects setMessageType={setMessageType} closeDemo={closeDemo} />
         </div>

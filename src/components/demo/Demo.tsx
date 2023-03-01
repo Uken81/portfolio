@@ -4,6 +4,7 @@ export type DemoImage = 'gccm' | 'garden';
 
 export const Demo: React.FC<{ demoImage: string }> = ({ demoImage }) => {
   let image;
+  //also change to object, amybe put in same file as message obj??
   switch (demoImage) {
     case 'gccm':
       image = test;
