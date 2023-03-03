@@ -48,7 +48,7 @@ export const MainMessage: React.FC<{
   }) => (
     <div className="flex flex-col">
       <div className="mb-10 cursor-default">
-        <h1 className="bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text p-3 text-6xl font-extrabold text-transparent">
+        <h1 className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text p-3 text-6xl font-extrabold text-transparent hover:bg-gradient-to-l">
           {props.title}
         </h1>
       </div>
@@ -59,7 +59,7 @@ export const MainMessage: React.FC<{
 
         {message.links && (
           <div className="ml-2 flex max-w-lg bg-gray-900 pt-4 pl-4">
-            <div className="ml-4 bg-gradient-to-r from-sky-500 to-indigo-500">
+            <div className="ml-4 bg-gradient-to-r from-sky-500 to-indigo-500 duration-1000 hover:bg-gradient-to-l">
               <div className="mb-0.5 bg-gray-900">
                 <a
                   href={message.links?.site}
@@ -71,7 +71,7 @@ export const MainMessage: React.FC<{
                 </a>
               </div>
             </div>
-            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500">
+            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <div className="mb-0.5 bg-gray-900">
                 <a
                   href={props.links?.github}
@@ -81,7 +81,7 @@ export const MainMessage: React.FC<{
                 </a>
               </div>
             </div>
-            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500">
+            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <div className="mb-0.5 bg-gray-900">
                 <p
                   onClick={handleClick}

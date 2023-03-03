@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 px-52 py-32 text-gray-400">
       <Header setMessageType={setMessageType} closeDemo={closeDemo} />
-      <div className="px-32">
+      <div className="px-52">
         <div className="flex justify-center p-16">
           <Demo demoImage={demoImage} closeDemo={closeDemo} />
         </div>

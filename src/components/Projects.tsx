@@ -15,14 +15,14 @@ export const Projects: React.FC<{
         <div className="max-w-fit bg-gradient-to-br from-sky-500 to-indigo-500">
           <p
             onClick={() => handleClick('gccm')}
-            className="mb-0.5 cursor-pointer bg-gray-900 duration-300 hover:text-white">
+            className="mb-0.5 cursor-pointer bg-gray-900 duration-300 hover:tracking-wider hover:text-white">
             GCCM
           </p>
         </div>
         <div className="max-w-fit bg-gradient-to-br from-sky-500 to-indigo-500">
           <p
             onClick={() => handleClick('garden')}
-            className="mb-0.5 cursor-pointer bg-gray-900 duration-300 hover:text-white">
+            className="mb-0.5 cursor-pointer bg-gray-900 duration-300 hover:tracking-wider hover:text-white">
             Garden Logger
           </p>
         </div>
