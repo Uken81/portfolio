@@ -12,7 +12,7 @@ export const MainMessage: React.FC<{
     //export below object to its own file??
     gccm: {
       title: 'GCCM',
-      text: 'Aliqua sunt culpa irure anim. Anim magna aliquip officia in ullamco non laborum laboris ullamco dolore ex. Reprehenderit nostrud duis consequat nisi enim ex sint ipsum laboris. Anim et ea duis veniam aute irure quis in. Exercitation quis eu consequat aliquip ut pariatur enim irure labore.',
+      text: 'Create and manage digital cheatsheets for your Gurps characters with ease using this webapp. Designed for players of the popular tabletop RPG Gurps, the Gurps Character Cheatsheet Maker allows you to access clear descriptions of the advantages and disadvantages chosen for your character.<br><br>With GCCM you can save your cheatsheets to a database and easily access, modify, and delete them. The inbuilt PDF maker also lets you create digital copies of your cheatsheets to share with other players and the Game Master, providing a quick and detailed reference during gameplay.',
       links: {
         site: 'https://pensive-goldstine-f0979f.netlify.app/',
         github: 'https://github.com/Uken81/GCCM-Redux/tree/main',
