@@ -21,21 +21,30 @@ export const Header: React.FC<{
         color="white"
       />
       <div className="ml-auto flex ">
-        <a href="mailto:brendanhurd@gmail.com">
+        <a
+          href="mailto:brendanhurd@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer">
           <SiGmail
             size={'2em'}
             color={'white'}
             className="mr-2 duration-300 hover:scale-125"
           />
         </a>
-        <a href="https://www.linkedin.com/in/brendan-hurd-36b211259/">
+        <a
+          href="https://www.linkedin.com/in/brendan-hurd-36b211259/"
+          target="_blank"
+          rel="noopener noreferrer">
           <AiOutlineLinkedin
             size={'2em'}
             className="mr-2 duration-300 hover:scale-125"
             color={'white'}
           />
         </a>
-        <a href="https://github.com/Uken81">
+        <a
+          href="https://github.com/Uken81"
+          target="_blank"
+          rel="noopener noreferrer">
           <GoMarkGithub
             size={'2em'}
             className="mr-2 duration-300 hover:scale-125"

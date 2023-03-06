@@ -30,12 +30,7 @@ export const MainMessage: React.FC<{
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div
-          className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 scrollbar-none"
-          style={{ msOverflowStyle: '-ms-autohiding-scrollbar' }}>
-          {/* <div
-          className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4"
-          style={{ msOverflowStyle: '-ms-autohiding-scrollbar' }}> */}
+        <div className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 scrollbar-none">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
