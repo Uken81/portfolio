@@ -1,8 +1,6 @@
-import test from '../../assets/demoImages/test.gif';
-import gardenGif from '../../assets/demoImages/gardenManagerDemo.gif';
+import test from '../assets/demoImages/test.gif';
+import gardenGif from '../assets/demoImages/gardenManagerDemo.gif';
 import { AiOutlineClose } from 'react-icons/ai';
-
-export type DemoImage = 'gccm' | 'garden';
 
 export const Demo: React.FC<{
   demoImage: string | null;

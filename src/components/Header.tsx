@@ -4,11 +4,11 @@ import { AiOutlineLinkedin } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 
 export const Header: React.FC<{
-  setMessageType: React.Dispatch<React.SetStateAction<string>>;
+  setSelectedProject: React.Dispatch<React.SetStateAction<string>>;
   closeDemo: () => void;
-}> = ({ setMessageType, closeDemo }) => {
+}> = ({ setSelectedProject, closeDemo }) => {
   const handleClick = () => {
-    setMessageType('welcome');
+    setSelectedProject('welcome');
     closeDemo();
   };
 
