@@ -8,7 +8,7 @@ import './style.css';
 function App() {
   const [selectedProject, setSelectedProject] = useState('welcome');
   const [demoImage, setDemoImage] = useState<string | null>(null);
-  //remove function and use state setter instead?
+
   const closeDemo = () => {
     setDemoImage(null);
   };

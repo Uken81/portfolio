@@ -1,4 +1,4 @@
-import test from '../assets/demoImages/test.gif';
+import gccmGif from '../assets/demoImages/gccm.gif';
 import gardenGif from '../assets/demoImages/gardenManagerDemo.gif';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -7,10 +7,9 @@ export const Demo: React.FC<{
   closeDemo: () => void;
 }> = ({ demoImage, closeDemo }) => {
   let image;
-  //also change to object, amybe put in same file as message obj??
   switch (demoImage) {
     case 'gccm':
-      image = test;
+      image = gccmGif;
       break;
     case 'garden':
       image = gardenGif;

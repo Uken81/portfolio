@@ -13,6 +13,7 @@ export interface Project {
   links?: { site: string; github: string; demo: string };
 }
 
+//When adding more projects with demo gifs make sure to import the gif file from src/assets/demoImages to Demo.tsx and add a new case to the switch statement.
 export const projects: ProjectObj = {
   gccm: {
     keyName: 'gccm',
