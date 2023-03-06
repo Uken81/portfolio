@@ -12,6 +12,14 @@ export const MainMessage: React.FC<{
     }
   };
 
+  const Link = (props: { linkText: string; linkRef: string }) => (
+    <div className="mb-0.5 bg-gray-900">
+      <a href={props.linkRef} target="_blank" rel="noopener noreferrer">
+        <span className="duration-300 hover:text-white">{props.linkText}</span>
+      </a>
+    </div>
+  );
+
   const Message = (props: Project) => (
     <div className="flex flex-col">
       <div className="mb-10 cursor-default">
@@ -25,27 +33,11 @@ export const MainMessage: React.FC<{
         </div>
         {project.links && (
           <div className="ml-2 flex max-w-lg bg-gray-900 pt-4 pl-4">
-            <div className="ml-4 bg-gradient-to-r from-sky-500 to-indigo-500 duration-1000 hover:bg-gradient-to-l">
-              <div className="mb-0.5 bg-gray-900">
-                <a
-                  href={project.links?.site}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <span className="duration-300 hover:text-white">
-                    View Site
-                  </span>
-                </a>
-              </div>
+            <div className="ml-4 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
+              <Link linkRef={project.links.site} linkText="View Site" />
             </div>
             <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
-              <div className="mb-0.5 bg-gray-900">
-                <a
-                  href={props.links?.github}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <span className="duration-300 hover:text-white">GitHub</span>
-                </a>
-              </div>
+              <Link linkRef={project.links.github} linkText="GitHub" />
             </div>
             <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <div className="mb-0.5 bg-gray-900">
