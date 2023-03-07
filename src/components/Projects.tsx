@@ -16,7 +16,7 @@ export const Projects: React.FC<{
     <div className="max-w-fit bg-gradient-to-br from-sky-500 to-indigo-500">
       <p
         onClick={() => handleClick(props.onClickParam)}
-        className="mb-0.5 cursor-pointer bg-gray-900 text-lg duration-300 hover:tracking-wider hover:text-white">
+        className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 text-lg duration-300 hover:tracking-wider hover:text-white">
         {props.title}
       </p>
     </div>
