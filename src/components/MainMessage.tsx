@@ -15,9 +15,7 @@ export const MainMessage: React.FC<{
   const Link = (props: { linkText: string; linkRef: string }) => (
     <div className="mb-0.5 bg-gray-900">
       <a href={props.linkRef} target="_blank" rel="noopener noreferrer">
-        <span className=" pb-1 duration-300 hover:text-white">
-          {props.linkText}
-        </span>
+        <span className=" pb-1 text-white duration-300">{props.linkText}</span>
       </a>
     </div>
   );
