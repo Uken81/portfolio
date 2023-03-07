@@ -16,17 +16,17 @@ export const Projects: React.FC<{
     <div className="max-w-fit bg-gradient-to-br from-sky-500 to-indigo-500">
       <p
         onClick={() => handleClick(props.onClickParam)}
-        className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 text-lg duration-300 hover:tracking-wider hover:text-white">
+        className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900  duration-300 hover:tracking-wider ">
         {props.title}
       </p>
     </div>
   );
 
   return (
-    <div className="ml-auto flex max-w-min rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 pl-2 pt-2">
+    <div className="flex h-10 w-24 rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 pl-1 pt-1">
       <div className="flex flex-col bg-gray-900  px-4 py-4 text-gray-400">
-        <h1 className="mb-2 cursor-default bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-3xl font-extrabold text-transparent">
-          Projectss
+        <h1 className="mb-2 cursor-default bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-xl font-extrabold text-transparent">
+          Projects
         </h1>
         {projectList.map((project) => (
           <Project
