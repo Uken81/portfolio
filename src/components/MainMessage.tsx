@@ -30,7 +30,7 @@ export const MainMessage: React.FC<{
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 max-h-36 cursor-default  bg-gray-900 pl-4 text-sm scrollbar scrollbar-thumb-red-600">
+        <div className="ml-2 max-h-52 cursor-default  overflow-x-auto bg-gray-900 pl-4 text-sm">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
