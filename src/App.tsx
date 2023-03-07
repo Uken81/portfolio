@@ -14,23 +14,14 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 px-52 py-32 text-gray-400">
+    <div className="flex min-h-screen flex-col bg-gray-900  p-10 text-gray-400">
       <Header setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
-      <div className="px-52">
-        <div className="flex justify-center p-16">
-          <Demo demoImage={demoImage} closeDemo={closeDemo} />
-        </div>
-        <div className="flex flex-row justify-center">
-          <MainMessage
-            selectedProject={selectedProject}
-            setDemoImage={setDemoImage}
-          />
-          <Projects
-            setSelectedProject={setSelectedProject}
-            closeDemo={closeDemo}
-          />
-        </div>
-      </div>
+      <Demo demoImage={demoImage} closeDemo={closeDemo} />
+      <MainMessage
+        selectedProject={selectedProject}
+        setDemoImage={setDemoImage}
+      />
+      <Projects setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
     </div>
   );
 }

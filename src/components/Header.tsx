@@ -13,14 +13,14 @@ export const Header: React.FC<{
   };
 
   return (
-    <div className="mb-16 flex justify-between hover:pointer-events-auto">
+    <div className="pointer-events-auto flex justify-between">
       <AiTwotoneHome
         size={'2em'}
         onClick={handleClick}
-        className="duration-300 hover:scale-125 hover:cursor-pointer"
+        className="cursor-pointer duration-300 hover:scale-125"
         color="white"
       />
-      <div className="ml-auto flex ">
+      <div className="flex ">
         <a
           href="mailto:brendanhurd@gmail.com"
           target="_blank"

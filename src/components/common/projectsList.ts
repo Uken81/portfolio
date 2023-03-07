@@ -38,6 +38,6 @@ export const projects: ProjectObj = {
   welcome: {
     keyName: 'welcome',
     title: 'Welcome.',
-    text: 'Consectetur excepteur proident laboris incididunt laboris proident tempor aliqua id aliquip. Incididunt proident amet mollit anim voluptate. Qui incididunt officia ipsum cupidatat velit officia commodo ullamco deserunt incididunt ex reprehenderit. Veniam id adipisicing duis veniam reprehenderit eiusmod amet voluptate. Duis eiusmod veniam quis commodo nostrud adipisicing laborum. Do minim esse est tempor id commodo ex nisi irure minim.'
+    text: 'My name is Brendan Hurd, im a self taught front end developer based in Melbourne, Australia. Duis eiusmod veniam quis commodo nostrud adipisicing laborum. Do minim esse est tempor id commodo ex nisi irure minim.'
   }
 };

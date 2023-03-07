@@ -16,11 +16,13 @@ export const Demo: React.FC<{
   }
 
   return demoImage ? (
-    <div className="mb-16 transform transition-transform duration-500 hover:scale-150 ">
-      <AiOutlineClose
-        className="ml-auto mr-1 mb-1 cursor-pointer  bg-gray-900 hover:text-white"
-        onClick={closeDemo}
-      />
+    <div className="flex flex-col justify-center p-16">
+      <div className="transform transition-transform duration-500 hover:scale-150 ">
+        <AiOutlineClose
+          className="ml-auto mr-1 mb-1 cursor-pointer  bg-gray-900 hover:text-white"
+          onClick={closeDemo}
+        />
+      </div>
       <div className="rounded border-8 border-double border-gray-400">
         <img src={image} className="max-h-72 " />
       </div>

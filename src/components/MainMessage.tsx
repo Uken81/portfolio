@@ -24,13 +24,14 @@ export const MainMessage: React.FC<{
 
   const Message = (props: Project) => (
     <div className="flex flex-col">
-      <div className="mb-8 cursor-default">
-        <h1 className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text p-4 text-6xl font-extrabold text-transparent hover:bg-gradient-to-l">
+      <div className="mb-6 flex cursor-default justify-center">
+        <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-4 text-6xl font-extrabold text-transparent hover:bg-gradient-to-l">
           {props.title}
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 scrollbar-none">
+        {/* <div className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 scrollbar-none"> */}
+        <div className="ml-2 max-h-64 cursor-default overflow-y-auto bg-gray-900 pl-4 scrollbar-none">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
