@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-900  p-10 text-gray-400">
+    <div className="flex min-h-screen flex-col bg-gray-900  p-6 text-gray-400">
       <Header setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
       <Demo demoImage={demoImage} closeDemo={closeDemo} />
       <MainMessage

@@ -13,11 +13,11 @@ export const Header: React.FC<{
   };
 
   return (
-    <div className="pointer-events-auto flex justify-between">
+    <div className="mb-6 flex justify-between">
       <AiTwotoneHome
         size={'2em'}
         onClick={handleClick}
-        className="cursor-pointer duration-300 hover:scale-125"
+        className="cursor-pointer"
         color="white"
       />
       <div className="flex ">
@@ -25,11 +25,7 @@ export const Header: React.FC<{
           href="mailto:brendanhurd@gmail.com"
           target="_blank"
           rel="noopener noreferrer">
-          <SiGmail
-            size={'2em'}
-            color={'white'}
-            className="mr-2 duration-300 hover:scale-125"
-          />
+          <SiGmail size={'2em'} color={'white'} className="mr-2" />
         </a>
         <a
           href="https://www.linkedin.com/in/brendan-hurd-36b211259/"
@@ -45,11 +41,7 @@ export const Header: React.FC<{
           href="https://github.com/Uken81"
           target="_blank"
           rel="noopener noreferrer">
-          <GoMarkGithub
-            size={'2em'}
-            className="mr-2 duration-300 hover:scale-125"
-            color={'white'}
-          />
+          <GoMarkGithub size={'2em'} className="mr-2" color={'white'} />
         </a>
       </div>
     </div>

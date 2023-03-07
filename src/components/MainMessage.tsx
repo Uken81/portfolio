@@ -24,8 +24,8 @@ export const MainMessage: React.FC<{
 
   const Message = (props: Project) => (
     <div className="flex flex-col">
-      <div className="mb-6 flex cursor-default justify-center">
-        <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-4 text-6xl font-extrabold text-transparent hover:bg-gradient-to-l">
+      <div className="mb-6 flex cursor-default justify-center text-center">
+        <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-6xl font-extrabold text-transparent hover:bg-gradient-to-l">
           {props.title}
         </h1>
       </div>
