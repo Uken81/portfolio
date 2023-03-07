@@ -26,7 +26,7 @@ export const Projects: React.FC<{
     <div className="flex max-w-min rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 pl-2 pt-2">
       <div className="flex flex-col bg-gray-900  px-4 py-4 text-gray-400">
         <h1 className="mb-2 cursor-default bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-3xl font-extrabold text-transparent">
-          Projects
+          Projectss
         </h1>
         {projectList.map((project) => (
           <Project
