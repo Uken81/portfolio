@@ -15,7 +15,7 @@ export const MainMessage: React.FC<{
   const Link = (props: { linkText: string; linkRef: string }) => (
     <div className="mb-0.5 bg-gray-900">
       <a href={props.linkRef} target="_blank" rel="noopener noreferrer">
-        <span className="text-lg duration-300 hover:text-white">
+        <span className=" pb-1 duration-300 hover:text-white">
           {props.linkText}
         </span>
       </a>
@@ -30,24 +30,24 @@ export const MainMessage: React.FC<{
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2  cursor-default  bg-gray-900 pl-4 scrollbar scrollbar-thumb-red-600">
+        <div className="ml-2 max-h-36 cursor-default  bg-gray-900 pl-4 text-sm scrollbar scrollbar-thumb-red-600">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
           <div className="ml-2 flex max-w-lg bg-gray-900 pt-4 pl-4">
-            <div className="ml-4 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
+            <div className="ml-4 mb-1 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <Link linkRef={project.links.site} linkText="View Site" />
             </div>
-            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
+            <div className="ml-8 mb-1 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <Link linkRef={project.links.github} linkText="GitHub" />
             </div>
             <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <div className="mb-0.5 bg-gray-900">
-                <p
+                <span
                   onClick={handleClick}
-                  className="cursor-pointer text-lg duration-300 hover:text-white">
+                  className="cursor-pointer  duration-300 hover:text-white">
                   Demo
-                </p>
+                </span>
               </div>
             </div>
           </div>
