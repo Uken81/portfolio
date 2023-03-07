@@ -23,8 +23,8 @@ export const Projects: React.FC<{
   );
 
   return (
-    <div className="mt-10 max-h-20 w-56 rounded-l bg-gradient-to-r from-sky-500 to-indigo-500">
-      <div className="mt-2 ml-2 flex  h-52 w-56 flex-col justify-between bg-gray-900 p-10 text-gray-400">
+    <div className="flex max-w-min rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 pl-2 pt-2">
+      <div className="flex flex-col bg-gray-900  px-4 py-4 text-gray-400">
         <h1 className="mb-2 cursor-default bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-3xl font-extrabold text-transparent">
           Projects
         </h1>
