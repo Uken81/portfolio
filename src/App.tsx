@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900  p-6 text-gray-400">
+    <div className="min-h-screen bg-gray-900  p-6 text-stone-300">
       <Header setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
       <Demo demoImage={demoImage} closeDemo={closeDemo} />
       <MainMessage

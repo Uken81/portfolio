@@ -15,9 +15,7 @@ export const MainMessage: React.FC<{
   const Link = (props: { linkText: string; linkRef: string }) => (
     <div className="mb-0.5 bg-gray-900">
       <a href={props.linkRef} target="_blank" rel="noopener noreferrer">
-        <span className="text-lg duration-300 hover:text-white">
-          {props.linkText}
-        </span>
+        <span className="pb-1">{props.linkText}</span>
       </a>
     </div>
   );
@@ -25,12 +23,12 @@ export const MainMessage: React.FC<{
   const Message = (props: Project) => (
     <div className="mb-28 flex h-96 flex-col">
       <div className="mb-6 flex cursor-default justify-center text-center">
-        <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-1 text-6xl font-extrabold text-transparent hover:bg-gradient-to-l">
+        <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-1 text-4xl font-extrabold text-transparent hover:bg-gradient-to-l">
           {props.title}
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 scrollbar-none">
+        <div className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 text-sm">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
@@ -41,13 +39,9 @@ export const MainMessage: React.FC<{
             <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <Link linkRef={project.links.github} linkText="GitHub" />
             </div>
-            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
-              <div className="mb-0.5 bg-gray-900">
-                <p
-                  onClick={handleClick}
-                  className="cursor-pointer text-lg duration-300 hover:text-white">
-                  Demo
-                </p>
+            <div className="ml-8  bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
+              <div className="bg-gray-900">
+                <span onClick={handleClick}>Demo</span>
               </div>
             </div>
           </div>
