@@ -28,7 +28,7 @@ export const MainMessage: React.FC<{
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 cursor-default bg-gray-900 pl-4 pr-8 text-sm">
+        <div className="ml-2 cursor-default bg-gray-900 pl-4 pr-8 text-sm leading-6">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
