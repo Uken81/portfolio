@@ -15,7 +15,7 @@ export const MainMessage: React.FC<{
   const Link = (props: { linkText: string; linkRef: string }) => (
     <div className="mb-0.5 bg-gray-900">
       <a href={props.linkRef} target="_blank" rel="noopener noreferrer">
-        <span className=" pb-1 text-white duration-300">{props.linkText}</span>
+        <span className=" pb-1  duration-300">{props.linkText}</span>
       </a>
     </div>
   );
@@ -28,7 +28,7 @@ export const MainMessage: React.FC<{
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 max-h-52 cursor-default  overflow-x-auto bg-gray-900 pl-4 text-sm">
+        <div className="ml-2 max-h-52 cursor-default  overflow-x-auto bg-gray-900 pl-4 text-sm ">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
@@ -39,11 +39,11 @@ export const MainMessage: React.FC<{
             <div className="ml-8 mb-1 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <Link linkRef={project.links.github} linkText="GitHub" />
             </div>
-            <div className="ml-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
+            <div className="ml-8 mb-1 bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l">
               <div className="mb-0.5 bg-gray-900">
                 <span
                   onClick={handleClick}
-                  className="cursor-pointer  duration-300 hover:text-white">
+                  className="cursor-pointer  duration-300">
                   Demo
                 </span>
               </div>
