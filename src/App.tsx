@@ -17,7 +17,7 @@ function App() {
     <div className="min-h-screen bg-gray-900  p-6 text-stone-300">
       <Header setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
       <Demo demoImage={demoImage} closeDemo={closeDemo} />
-      <div className="flex flex-col justify-center">
+      <div className="">
         <MainMessage
           selectedProject={selectedProject}
           setDemoImage={setDemoImage}
