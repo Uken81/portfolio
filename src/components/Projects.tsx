@@ -23,18 +23,20 @@ export const Projects: React.FC<{
   );
 
   return (
-    <div className="flex max-w-min rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 pl-2 pt-2">
-      <div className="flex flex-col bg-gray-900  px-4 py-4 text-gray-400">
-        <h1 className="mb-2 cursor-default bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-xl font-extrabold text-transparent">
-          Projects
-        </h1>
-        {projectList.map((project) => (
-          <Project
-            key={project.keyName}
-            title={project.title}
-            onClickParam={project.keyName}
-          />
-        ))}
+    <div className="pb-24">
+      <div className="flex h-10 w-20 rounded-l bg-gradient-to-r from-sky-500 to-indigo-500 pl-1 pt-1">
+        <div className="flex flex-col  bg-gray-900 px-4 py-4">
+          <h1 className="mb-2 cursor-default bg-gradient-to-br from-sky-500 to-indigo-500 bg-clip-text text-xl font-extrabold text-transparent">
+            Projects
+          </h1>
+          {projectList.map((project) => (
+            <Project
+              key={project.keyName}
+              title={project.title}
+              onClickParam={project.keyName}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

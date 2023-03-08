@@ -21,14 +21,14 @@ export const MainMessage: React.FC<{
   );
 
   const Message = (props: Project) => (
-    <div className="mb-28 flex h-96 flex-col">
+    <div className="mb-24 flex flex-col">
       <div className="mb-6 flex cursor-default justify-center text-center">
         <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-1 text-4xl font-extrabold text-transparent hover:bg-gradient-to-l">
           {props.title}
         </h1>
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
-        <div className="ml-2 max-h-56 cursor-default overflow-y-auto bg-gray-900 pl-4 text-sm">
+        <div className="ml-2 cursor-default bg-gray-900 pl-4 pr-8 text-sm">
           <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
         </div>
         {project.links && (
