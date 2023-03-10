@@ -22,10 +22,13 @@ export const MainMessage: React.FC<{
 
   const Message = (props: Project) => (
     <div className="mb-24 flex flex-col">
-      <div className="mb-6 flex cursor-default justify-center text-center">
-        <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-1 text-4xl font-extrabold text-transparent hover:bg-gradient-to-l">
+      <div className="mb-6 flex cursor-default flex-col justify-center text-center">
+        <h1 className="mb-6 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text p-1 text-4xl font-extrabold text-transparent hover:bg-gradient-to-l">
           {props.title}
         </h1>
+        {props.subtitle && (
+          <h2 dangerouslySetInnerHTML={{ __html: props.subtitle }}></h2>
+        )}
       </div>
       <div className="max-w-lg bg-gradient-to-b from-sky-500 to-indigo-500">
         <div className="ml-1 cursor-default bg-gray-900 pl-4 pr-8 text-sm leading-6">
@@ -51,6 +54,11 @@ export const MainMessage: React.FC<{
   );
 
   return (
-    <Message title={project.title} text={project.text} links={project.links} />
+    <Message
+      title={project.title}
+      subtitle={project.subtitle}
+      text={project.text}
+      links={project.links}
+    />
   );
 };

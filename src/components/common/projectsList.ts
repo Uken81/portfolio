@@ -2,6 +2,7 @@ interface ProjectObj {
   [keyName: string]: {
     keyName: string;
     title: string;
+    subtitle?: string;
     text: string;
     links?: { site: string; github: string; demo: string };
   };
@@ -9,6 +10,7 @@ interface ProjectObj {
 
 export interface Project {
   title: string;
+  subtitle?: string;
   text: string;
   links?: { site: string; github: string; demo: string };
 }
@@ -18,7 +20,7 @@ export const projects: ProjectObj = {
   gccm: {
     keyName: 'gccm',
     title: 'GCCM',
-    text: 'Create and manage digital cheatsheets for your Gurps characters with ease. Designed for players of the popular tabletop RPG Gurps, the Gurps Character Cheatsheet Maker allows you to access clear descriptions of the advantages and disadvantages chosen for your character.<br>With GCCM you can save your cheatsheets to a user account and easily access, modify, and delete them. The inbuilt PDF maker then lets you create digital copies of your cheatsheets to share with other players and the Game Master, providing a quick and detailed reference during gameplay.<br><br><b><i>Concepts</i></b><br><i>* Testing</i><br><i>* Authentication<i><br><i>* Global state management</i><br><br><b><i>Frontend Tools</i></b><br><i>* React</i><br><i>* Typescript</i><br><i>* Redux</i><br><i>* Jest/RTL</i><br><br><b><i>Backend Tools</i></b><br><i>* Firebase</i>',
+    text: '<b><i>The Project</i></b><br>Gurps Character Cheatsheet Maker is a web app for users to create and manage character cheat sheets for the popular tabletop RPG Gurps.<br><br><b><i>Features</i></b><br>* Access descriptions of each advantage<pre> and disadvantage</pre><br>* Save, access, modify and delete your<pre> cheat sheet in your user account</pre><br>* Inbuilt PDF maker to save, print and share<br><br><b><i>Concepts</i></b><br><i>* Testing</i><br><i>* Authentication<i><br><i>* Global state management</i><br><br><b><i>Frontend Tools</i></b><br><i>* React</i><br><i>* Typescript</i><br><i>* Redux</i><br><i>* Jest/RTL</i><br><br><b><i>Backend Tools</i></b><br><i>* Firebase</i>',
     links: {
       site: 'https://pensive-goldstine-f0979f.netlify.app/',
       github: 'https://github.com/Uken81/GCCM-Redux/tree/main',
@@ -28,7 +30,7 @@ export const projects: ProjectObj = {
   garden: {
     keyName: 'garden',
     title: 'Garden Logger',
-    text: 'Garden Logger is a mobile application designed for gardeners who want to track changes in their garden over time. With this app, users can take pictures of their flowers and vegetables, add notes and tags to monitor growth, and stay on top of disease and pest issues.<br>Gardening areas can be created, subcategorised, grouped and sorted allowing you to quickly and efficiently focus on specific zones with ease.<br>Users can view their logs in a timeline, filtered by date ranges, locations, tags, and more. You can easily see the progress of your garden, the changes in plant growth, and any issues that arise.<br><br><b><i>Concepts</i></b><br><i>* Git Collaboration<i><br><i>* Global state management</i><br><i>* Mobile App Development</i><br><i>* Testing</i><br><br><b><i>Frontend Tools</i></b><br><i>* React Native</i><br><i>* Typescript</i><br><i>* Redux</i><br><i>* Jest/RTL</i>',
+    text: '<b><i>The Project</i></b><br>The Garden Logger mobile app allows users to record information about their plants and track change over time using multiple sorting functions and views.<br><br><b><i>Features</i></b><br>* Take photos of your plants to track over<pre> time</pre><br>* Add notes and tags to monitor growth,<pre> disease and pest issues over time</pre><br>* Create garden areas that can then be<pre> categorised, grouped and sorted</pre><br>* Timeline view, filter by date ranges, tags,<pre> location and more</pre><br><br><b><i>Concepts</i></b><br><i>* Git Collaboration<i><br><i>* Global state management</i><br><i>* Mobile App Development</i><br><i>* Testing</i><br><br><b><i>Frontend Tools</i></b><br><i>* React Native</i><br><i>* Typescript</i><br><i>* Redux</i><br><i>* Jest/RTL</i>',
     links: {
       site: 'https://pensive-goldstine-f0979f.netlify.app/',
       github: 'https://github.com/Uken81/GCCM-Redux/tree/main',
@@ -38,6 +40,8 @@ export const projects: ProjectObj = {
   welcome: {
     keyName: 'welcome',
     title: 'Welcome.',
-    text: 'My name is Brendan Hurd, im a self taught front end developer based in Melbourne, Australia. Duis eiusmod veniam quis commodo nostrud adipisicing laborum. Do minim esse est tempor id commodo ex nisi irure minim.'
+    subtitle:
+      'I’m Brendan Hurd.<br>Front End Developer | Self Taught | Melbourne, Australia',
+    text: 'I’m passionate about creating high-quality, user-friendly code and am proficient in Typescript and integration testing.<br>I bring curiosity, a love of learning and an obsession with quality to my code and projects. '
   }
 };
