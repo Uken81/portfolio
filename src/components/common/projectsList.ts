@@ -20,7 +20,7 @@ export const projects: ProjectObj = {
   gccm: {
     keyName: 'gccm',
     title: 'GCCM',
-    text: '<b><i>The Project</i></b><br>Gurps Character Cheatsheet Maker is a web app for users to create and manage character cheat sheets for the popular tabletop RPG Gurps.<br><br><b><i>Features</i></b><br>* Access descriptions of each advantage &nbsp;&nbsp;&nbsp;and disadvantage<br>* Save, access, modify and delete your &nbsp;&nbsp;&nbsp;cheat sheet in your user account<br>* Inbuilt PDF maker to save, print and share<br><br><b><i>Concepts</i></b><br><i>* Testing</i><br><i>* Authentication<i><br><i>* Global state management</i><br><br><b><i>Frontend Tools</i></b><br><i>* React</i><br><i>* Typescript</i><br><i>* Redux</i><br><i>* Jest/RTL</i><br><br><b><i>Backend Tools</i></b><br><i>* Firebase</i>',
+    text: '<b><i>The Project</i></b><br>Gurps Character Cheatsheet Maker is a desktop web app for users to create and manage character cheat sheets for the popular tabletop RPG Gurps.<br><br><b><i>Features</i></b><br>* Access descriptions of each advantage &nbsp;&nbsp;&nbsp;and disadvantage<br>* Save, access, modify and delete your &nbsp;&nbsp;&nbsp;cheat sheet in your user account<br>* Inbuilt PDF maker to save, print and share<br><br><b><i>Concepts</i></b><br><i>* Testing</i><br><i>* Authentication<i><br><i>* Global state management</i><br><br><b><i>Frontend Tools</i></b><br><i>* React</i><br><i>* Typescript</i><br><i>* Redux</i><br><i>* Jest/RTL</i><br><br><b><i>Backend Tools</i></b><br><i>* Firebase</i>',
     links: {
       site: 'https://pensive-goldstine-f0979f.netlify.app/',
       github: 'https://github.com/Uken81/GCCM-Redux/tree/main',

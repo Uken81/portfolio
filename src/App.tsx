@@ -18,10 +18,7 @@ function App() {
       <Header setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
       <Demo demoImage={demoImage} closeDemo={closeDemo} />
       <div className="">
-        <MainMessage
-          selectedProject={selectedProject}
-          setDemoImage={setDemoImage}
-        />
+        <MainMessage selectedProject={selectedProject} />
         <Projects
           setSelectedProject={setSelectedProject}
           closeDemo={closeDemo}
