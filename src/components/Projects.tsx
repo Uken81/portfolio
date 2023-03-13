@@ -6,6 +6,20 @@ const gradientRight =
 const gradientBottom =
   'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
+const Project: React.FC<{
+  onClickParam: string;
+  handleClick: any;
+  title: string;
+}> = ({ onClickParam, handleClick, title }) => (
+  <div className={`max-w-fit ${gradientRight}`}>
+    <p
+      onClick={() => handleClick(onClickParam)}
+      className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 pt-2 duration-300">
+      {title}
+    </p>
+  </div>
+);
+
 export const Projects: React.FC<{
   setSelectedProject: React.Dispatch<React.SetStateAction<string>>;
   closeDemo: () => void;
@@ -13,20 +27,11 @@ export const Projects: React.FC<{
   const projectList = Object.values(projects).filter(
     (project) => project.keyName !== 'welcome'
   );
+
   const handleClick = (name: string) => {
     setSelectedProject(name);
     closeDemo();
   };
-
-  const Project = (props: { onClickParam: string; title: string }) => (
-    <div className={`max-w-fit ${gradientRight}`}>
-      <p
-        onClick={() => handleClick(props.onClickParam)}
-        className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 pt-2 duration-300">
-        {props.title}
-      </p>
-    </div>
-  );
 
   return (
     <div className="pb-24">
@@ -41,6 +46,7 @@ export const Projects: React.FC<{
               key={project.keyName}
               title={project.title}
               onClickParam={project.keyName}
+              handleClick={handleClick}
             />
           ))}
         </div>
