@@ -1,27 +1,31 @@
 import gccmGif from '../assets/demoImages/gccm.gif';
 import gardenGif from '../assets/demoImages/gardenManagerDemo.gif';
 import { AiOutlineClose } from 'react-icons/ai';
+import { useEffect, useState } from 'react';
+import { ProjectName } from './common/projectsList';
 
 export const Demo: React.FC<{
-  demoImage: string | null;
-  closeDemo: () => void;
-}> = ({ demoImage, closeDemo }) => {
-  let image;
-  //add default case for demo img. null?
-  switch (demoImage) {
-    case 'gccm':
-      image = gccmGif;
-      break;
-    case 'garden':
-      image = gardenGif;
-  }
+  selectedProject: ProjectName;
+}> = ({ selectedProject }) => {
+  const [image, setImage] = useState('');
 
-  return demoImage ? (
+  useEffect(() => {
+    const images = {
+      gccm: gccmGif,
+      garden: gardenGif,
+      welcome: ''
+    };
+
+    const gif = images[selectedProject];
+    setImage(gif);
+  }, [selectedProject]);
+
+  return image !== '' ? (
     <div className="flex flex-col justify-center p-16">
       {/* <div className="transform transition-transform duration-500 hover:scale-150 "> */}
       <AiOutlineClose
+        onClick={() => setImage('')}
         className="ml-auto mr-1 mb-1 cursor-pointer bg-gray-900 hover:text-white"
-        onClick={closeDemo}
       />
       {/* </div> */}
       <div className="rounded border-8 border-double border-gray-400">

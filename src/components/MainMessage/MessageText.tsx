@@ -1,11 +1,9 @@
 import React from 'react';
 import { Project } from '../common/projectsList';
 
-const Description: React.FC<{ descriptionText: string }> = ({
-  descriptionText
-}) => (
+const Description: React.FC<{ descriptionText: string }> = ({ descriptionText }) => (
   <>
-    <span>{descriptionText}</span>
+    <p>{descriptionText}</p>
   </>
 );
 
@@ -14,7 +12,7 @@ const Features: React.FC<{ features?: string[] }> = ({ features }) => (
     <p className="mb-1 font-bold">Features</p>
     <ul className="list-outside list-disc pl-4">
       {features?.map((feature) => {
-        return <li>{feature}</li>;
+        return <li key={feature}>{feature}</li>;
       })}
     </ul>
   </>
@@ -26,7 +24,7 @@ const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => {
       <p className="mb-1 font-bold">Concepts</p>
       <ul className="list-outside list-disc pl-4">
         {concepts?.map((concept: string) => (
-          <li>{concept}</li>
+          <li key={concept}>{concept}</li>
         ))}
       </ul>
     </>
@@ -46,6 +44,5 @@ const Text: React.FC<{ project: Project }> = ({ project }) =>
   );
 
 export const MessageText: React.FC<{ project: Project }> = ({ project }) => {
-  console.log(project.title);
   return <Text project={project} />;
 };

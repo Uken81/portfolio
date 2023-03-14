@@ -1,19 +1,16 @@
-import { projects } from './common/projectsList';
+import { ProjectName, projects } from './common/projectsList';
 
-const gradientRight =
-  'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
+const gradientRight = 'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
-const gradientBottom =
-  'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
+const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
 const Project: React.FC<{
-  onClickParam: string;
-  handleClick: (name: string) => void;
+  handleClick: () => void;
   title: string;
-}> = ({ onClickParam, handleClick, title }) => (
+}> = ({ handleClick, title }) => (
   <div className={`max-w-fit ${gradientRight}`}>
     <p
-      onClick={() => handleClick(onClickParam)}
+      onClick={handleClick}
       className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 pt-2 duration-300">
       {title}
     </p>
@@ -21,17 +18,9 @@ const Project: React.FC<{
 );
 
 export const Projects: React.FC<{
-  setSelectedProject: React.Dispatch<React.SetStateAction<string>>;
-  closeDemo: () => void;
-}> = ({ setSelectedProject, closeDemo }) => {
-  const projectList = Object.values(projects).filter(
-    (project) => project.keyName !== 'welcome'
-  );
-
-  const handleClick = (name: string) => {
-    setSelectedProject(name);
-    closeDemo();
-  };
+  setSelectedProject: React.Dispatch<React.SetStateAction<ProjectName>>;
+}> = ({ setSelectedProject }) => {
+  const projectList = Object.values(projects).filter((project) => project.keyName !== 'welcome');
 
   return (
     <div className="pb-24">
@@ -45,8 +34,7 @@ export const Projects: React.FC<{
             <Project
               key={project.keyName}
               title={project.title}
-              onClickParam={project.keyName}
-              handleClick={handleClick}
+              handleClick={() => setSelectedProject(project.keyName)}
             />
           ))}
         </div>

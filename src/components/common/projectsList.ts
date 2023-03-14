@@ -1,6 +1,8 @@
+export type ProjectName = 'gccm' | 'garden' | 'welcome';
+
 interface ProjectObj {
   [objectName: string]: {
-    keyName: string;
+    keyName: ProjectName;
     title: string;
     subtitle?: string;
     text: ProjectText;
@@ -23,7 +25,7 @@ interface ProjectText {
   tools?: string[];
 }
 
-//When adding more projects with demo gifs make sure to upload the gif file to src/assets/demoImages then import to Demo.tsx and add a new case to the switch statement.
+//When adding more projects with demo gifs add its keyName property to the ProjectName type at the top of this file. Upload the gif file to src/assets/demoImages then import to Demo.tsx. In the same file add the keyName as a new key to the images object and the gif name as the value.
 export const projects: ProjectObj = {
   gccm: {
     keyName: 'gccm',
@@ -74,8 +76,7 @@ export const projects: ProjectObj = {
   welcome: {
     keyName: 'welcome',
     title: 'Welcome.',
-    subtitle:
-      'I’m Brendan Hurd.<br>Front End Developer | Self Taught | Melbourne, Australia',
+    subtitle: 'I’m Brendan Hurd.<br>Front End Developer | Self Taught | Melbourne, Australia',
     text: {
       description:
         'I’m passionate about creating high-quality, user-friendly code and am proficient in Typescript and integration testing. I bring curiosity, a love of learning and an obsession with quality to my code and projects.'

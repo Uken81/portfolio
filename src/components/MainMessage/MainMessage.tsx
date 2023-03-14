@@ -1,33 +1,20 @@
 import { Project, projects } from '../common/projectsList';
 import { MessageText } from './MessageText';
 
-const gradientRight =
-  'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
+const gradientRight = 'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
-const gradientBottom =
-  'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
+const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
-const Title: React.FC<{ title: string; subtitle?: string }> = ({
-  title,
-  subtitle
-}) => (
+const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => (
   <div className="mb-6 flex cursor-default flex-col">
-    <h1
-      className={`${gradientBottom} ml-4 bg-clip-text text-4xl font-extrabold text-transparent`}>
+    <h1 className={`${gradientBottom} ml-4 bg-clip-text text-4xl font-extrabold text-transparent`}>
       {title}
     </h1>
-    {subtitle && (
-      <h2
-        className="mt-6 ml-5"
-        dangerouslySetInnerHTML={{ __html: subtitle }}></h2>
-    )}
+    {subtitle && <h2 className="mt-6 ml-5" dangerouslySetInnerHTML={{ __html: subtitle }}></h2>}
   </div>
 );
 
-const Link: React.FC<{ linkText: string; linkRef: string }> = ({
-  linkText,
-  linkRef
-}) => (
+const Link: React.FC<{ linkText: string; linkRef: string }> = ({ linkText, linkRef }) => (
   <div className="mb-0.5 bg-gray-900">
     <a href={linkRef} target="_blank" rel="noopener noreferrer">
       <span className="pb-1">{linkText}</span>
