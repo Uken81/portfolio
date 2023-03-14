@@ -36,9 +36,9 @@ export const Projects: React.FC<{
   return (
     <div className="pb-24">
       <div className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1`}>
-        <div className="flex flex-col  bg-gray-900 p-4">
+        <div className="flex flex-col  bg-gray-900 pl-4 pt-4">
           <h1
-            className={`mb-2 cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent`}>
+            className={`cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent`}>
             Projects
           </h1>
           {projectList.map((project) => (

@@ -31,11 +31,7 @@ export const Header: React.FC<{
           href="https://www.linkedin.com/in/brendan-hurd-36b211259/"
           target="_blank"
           rel="noopener noreferrer">
-          <AiOutlineLinkedin
-            size={'2em'}
-            className="mr-2 duration-300 hover:scale-125"
-            color={'white'}
-          />
+          <AiOutlineLinkedin size={'2em'} className="mr-2" color={'white'} />
         </a>
         <a
           href="https://github.com/Uken81"

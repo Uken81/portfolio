@@ -7,6 +7,7 @@ export const Demo: React.FC<{
   closeDemo: () => void;
 }> = ({ demoImage, closeDemo }) => {
   let image;
+  //add default case for demo img. null?
   switch (demoImage) {
     case 'gccm':
       image = gccmGif;
@@ -17,12 +18,12 @@ export const Demo: React.FC<{
 
   return demoImage ? (
     <div className="flex flex-col justify-center p-16">
-      <div className="transform transition-transform duration-500 hover:scale-150 ">
-        <AiOutlineClose
-          className="ml-auto mr-1 mb-1 cursor-pointer  bg-gray-900 hover:text-white"
-          onClick={closeDemo}
-        />
-      </div>
+      {/* <div className="transform transition-transform duration-500 hover:scale-150 "> */}
+      <AiOutlineClose
+        className="ml-auto mr-1 mb-1 cursor-pointer bg-gray-900 hover:text-white"
+        onClick={closeDemo}
+      />
+      {/* </div> */}
       <div className="rounded border-8 border-double border-gray-400">
         <img src={image} className="max-h-72 " />
       </div>

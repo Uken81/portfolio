@@ -11,12 +11,16 @@ const Title: React.FC<{ title: string; subtitle?: string }> = ({
   title,
   subtitle
 }) => (
-  <div className="mb-6 flex cursor-default flex-col justify-center text-center">
+  <div className="mb-6 flex cursor-default flex-col">
     <h1
-      className={`${gradientBottom} bg-clip-text p-1 text-4xl font-extrabold text-transparent`}>
+      className={`${gradientBottom} ml-4 bg-clip-text text-4xl font-extrabold text-transparent`}>
       {title}
     </h1>
-    {subtitle && <h2 dangerouslySetInnerHTML={{ __html: subtitle }}></h2>}
+    {subtitle && (
+      <h2
+        className="mt-6 ml-5"
+        dangerouslySetInnerHTML={{ __html: subtitle }}></h2>
+    )}
   </div>
 );
 
@@ -38,11 +42,11 @@ const Message: React.FC<{
     <div className="mb-24 flex flex-col">
       <Title title={project.title} subtitle={project.subtitle} />
       <div className={`max-w-lg ${gradientBottom}`}>
-        <div className="ml-1 cursor-default bg-gray-900 pl-4 pr-8 text-sm leading-6">
+        <div className="ml-1 cursor-default bg-gray-900 pl-4 text-sm leading-6">
           <MessageText project={project} />
         </div>
         {project.links && (
-          <div className="ml-1 flex max-w-lg bg-gray-900 pl-4">
+          <div className="ml-1 flex max-w-lg bg-gray-900 pl-4 pt-4">
             <div className={`${gradientRight} hover:bg-gradient-to-l`}>
               <Link linkRef={project.links.site} linkText="View Site" />
             </div>

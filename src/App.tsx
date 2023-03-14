@@ -14,16 +14,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900  p-6 text-stone-300">
+    <div className="min-h-screen bg-gray-900 p-6 text-stone-300">
       <Header setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
       <Demo demoImage={demoImage} closeDemo={closeDemo} />
-      <div className="">
-        <MainMessage selectedProject={selectedProject} />
-        <Projects
-          setSelectedProject={setSelectedProject}
-          closeDemo={closeDemo}
-        />
-      </div>
+      <MainMessage selectedProject={selectedProject} />
+      <Projects setSelectedProject={setSelectedProject} closeDemo={closeDemo} />
     </div>
   );
 }
