@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Demo } from './components/Demo';
 import { Header } from './components/Header';
-import { MainMessage } from './components/MainMessage';
+import { MainMessage } from './components/MainMessage/MainMessage';
 import { Projects } from './components/Projects';
 import './style.css';
 

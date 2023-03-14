@@ -1,4 +1,5 @@
-import { Project, projects } from './common/projectsList';
+import { Project, projects } from '../common/projectsList';
+import { MessageText } from './MessageText';
 
 const gradientRight =
   'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
@@ -6,7 +7,7 @@ const gradientRight =
 const gradientBottom =
   'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
-const Titles: React.FC<{ title: string; subtitle?: string }> = ({
+const Title: React.FC<{ title: string; subtitle?: string }> = ({
   title,
   subtitle
 }) => (
@@ -35,13 +36,13 @@ const Message: React.FC<{
 }> = ({ project }) => {
   return (
     <div className="mb-24 flex flex-col">
-      <Titles title={project.title} subtitle={project.subtitle} />
+      <Title title={project.title} subtitle={project.subtitle} />
       <div className={`max-w-lg ${gradientBottom}`}>
         <div className="ml-1 cursor-default bg-gray-900 pl-4 pr-8 text-sm leading-6">
-          <span dangerouslySetInnerHTML={{ __html: project.text }}></span>
+          <MessageText project={project} />
         </div>
         {project.links && (
-          <div className="ml-1 flex max-w-lg bg-gray-900 pt-4 pl-4">
+          <div className="ml-1 flex max-w-lg bg-gray-900 pl-4">
             <div className={`${gradientRight} hover:bg-gradient-to-l`}>
               <Link linkRef={project.links.site} linkText="View Site" />
             </div>

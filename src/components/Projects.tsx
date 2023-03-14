@@ -8,7 +8,7 @@ const gradientBottom =
 
 const Project: React.FC<{
   onClickParam: string;
-  handleClick: any;
+  handleClick: (name: string) => void;
   title: string;
 }> = ({ onClickParam, handleClick, title }) => (
   <div className={`max-w-fit ${gradientRight}`}>
