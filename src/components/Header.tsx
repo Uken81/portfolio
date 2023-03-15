@@ -7,25 +7,33 @@ import { ProjectName } from './common/projectsList';
 export const Header: React.FC<{
   setSelectedProject: React.Dispatch<React.SetStateAction<ProjectName>>;
 }> = ({ setSelectedProject }) => (
-  <div className="mb-6 flex justify-between">
+  <div className="mb-6 flex justify-between md:mb-12">
     <AiTwotoneHome
       size={'2em'}
       onClick={() => setSelectedProject('welcome')}
-      className="cursor-pointer"
+      className="cursor-pointer duration-300 sm:hover:scale-110"
       color="white"
     />
     <div className="flex ">
       <a href="mailto:brendanhurd@gmail.com" target="_blank" rel="noopener noreferrer">
-        <SiGmail size={'2em'} color={'white'} className="mr-2" />
+        <SiGmail size={'2em'} color={'white'} className="mr-2 duration-300 sm:hover:scale-110" />
       </a>
       <a
         href="https://www.linkedin.com/in/brendan-hurd-36b211259/"
         target="_blank"
         rel="noopener noreferrer">
-        <AiOutlineLinkedin size={'2em'} className="mr-2" color={'white'} />
+        <AiOutlineLinkedin
+          size={'2em'}
+          className="mr-2 duration-300 sm:hover:scale-110"
+          color={'white'}
+        />
       </a>
       <a href="https://github.com/Uken81" target="_blank" rel="noopener noreferrer">
-        <GoMarkGithub size={'2em'} className="mr-2" color={'white'} />
+        <GoMarkGithub
+          size={'2em'}
+          className="mr-2 duration-300 sm:hover:scale-110"
+          color={'white'}
+        />
       </a>
     </div>
   </div>

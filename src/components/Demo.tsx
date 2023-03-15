@@ -21,7 +21,7 @@ export const Demo: React.FC<{
   }, [selectedProject]);
 
   return image !== '' ? (
-    <div className="flex flex-col items-center px-6 pb-6">
+    <div className="flex flex-col items-center px-6 pb-6 md:px-12 md:pb-12">
       {/* <div className="transform transition-transform duration-500 hover:scale-150 "> */}
       <div>
         <AiOutlineClose

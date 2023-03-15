@@ -11,7 +11,7 @@ const Project: React.FC<{
   <div className={`max-w-fit ${gradientRight}`}>
     <p
       onClick={handleClick}
-      className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 pt-2 duration-300">
+      className="mb-0.5 cursor-pointer whitespace-nowrap bg-gray-900 pt-2 duration-300 hover:tracking-wider hover:text-white">
       {title}
     </p>
   </div>
@@ -27,7 +27,7 @@ export const Projects: React.FC<{
       <div className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1`}>
         <div className="flex flex-col  bg-gray-900 pl-4 pt-4">
           <h1
-            className={`cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent`}>
+            className={`cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl`}>
             Projects
           </h1>
           {projectList.map((project) => (

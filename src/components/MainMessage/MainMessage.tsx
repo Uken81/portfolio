@@ -7,7 +7,8 @@ const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gra
 
 const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => (
   <div className="mb-6 flex cursor-default flex-col">
-    <h1 className={`${gradientBottom} ml-4 bg-clip-text text-4xl font-extrabold text-transparent`}>
+    <h1
+      className={`${gradientBottom} ml-4 bg-clip-text pb-1 text-4xl font-extrabold text-transparent sm:text-5xl`}>
       {title}
     </h1>
     {subtitle && <h2 className="mt-6 ml-5" dangerouslySetInnerHTML={{ __html: subtitle }}></h2>}
@@ -17,7 +18,7 @@ const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle
 const Link: React.FC<{ linkText: string; linkRef: string }> = ({ linkText, linkRef }) => (
   <div className="mb-0.5 bg-gray-900">
     <a href={linkRef} target="_blank" rel="noopener noreferrer">
-      <span className="pb-1">{linkText}</span>
+      <span className="pb-1 hover:text-white">{linkText}</span>
     </a>
   </div>
 );
