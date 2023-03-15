@@ -8,7 +8,7 @@ const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gra
 const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => (
   <div className="mb-6 flex cursor-default flex-col">
     <h1
-      className={`${gradientBottom} ml-4 bg-clip-text pb-1 text-4xl font-extrabold text-transparent sm:text-5xl`}>
+      className={`${gradientBottom} ml-4 bg-clip-text pb-1 text-4xl font-extrabold text-transparent sm:text-5xl lg:text-6xl xl:text-7xl`}>
       {title}
     </h1>
     {subtitle && <h2 className="mt-6 ml-5" dangerouslySetInnerHTML={{ __html: subtitle }}></h2>}

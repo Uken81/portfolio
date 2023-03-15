@@ -23,7 +23,7 @@ export const Projects: React.FC<{
   const projectList = Object.values(projects).filter((project) => project.keyName !== 'welcome');
 
   return (
-    <div className="pb-24">
+    <div className="pb-24 lg:ml-auto">
       <div className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1`}>
         <div className="flex flex-col  bg-gray-900 pl-4 pt-4">
           <h1

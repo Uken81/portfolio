@@ -33,7 +33,7 @@ const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => {
 
 const Text: React.FC<{ project: Project }> = ({ project }) =>
   project.keyName !== 'welcome' ? (
-    <div className="flex h-max flex-col justify-between">
+    <div className="flex h-max flex-col justify-between xl:text-lg">
       <p className="mb-1 h-8 font-bold">The Project</p>
       <Description descriptionText={project.text.description} />
       <Features features={project.text.features} />
