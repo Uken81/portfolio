@@ -10,10 +10,10 @@ function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectName>('welcome');
 
   return (
-    <div className="min-h-screen bg-gray-900 p-6  text-stone-300 sm:p-12 md:p-24">
+    <div className="min-h-screen bg-gray-900 p-6  text-stone-300 sm:px-12 md:px-24 lg:px-36">
       <Header setSelectedProject={setSelectedProject} />
       <Demo selectedProject={selectedProject} />
-      <div className="lg:flex lg:px-24 xl:px-36 2xl:px-56">
+      <div className="lg:flex xl:px-36 2xl:px-64">
         <MainMessage selectedProject={selectedProject} />
         <Projects setSelectedProject={setSelectedProject} />
       </div>
