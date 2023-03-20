@@ -2,7 +2,7 @@ import { ProjectName, projects } from './common/projectsList';
 
 const gradientRight = 'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
 
-const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
+const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-t';
 
 const Project: React.FC<{
   handleClick: () => void;
@@ -27,7 +27,7 @@ export const Projects: React.FC<{
       <div className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1`}>
         <div className="flex flex-col  bg-gray-900 pl-4 pt-4">
           <h1
-            className={`cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl`}>
+            className={`cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent text-shadow-md  sm:text-2xl`}>
             Projects
           </h1>
           {projectList.map((project) => (

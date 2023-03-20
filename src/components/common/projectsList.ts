@@ -38,8 +38,8 @@ export const projects: ProjectObj = {
         'Save, access, modify and delete your cheat sheet in your user account',
         'Inbuilt PDF maker to save, print and share'
       ],
-      concepts: ['Testing', 'Authentication', 'Global state management'],
-      tools: ['React', 'Typescript', 'Redux', 'Jest/RTL', 'Firebase']
+      concepts: ['Testing', 'User authentication', 'Global state management'],
+      tools: ['React', 'Typescript', 'Redux', 'sass', 'Jest/RTL', 'Firebase']
     },
     links: {
       site: 'https://pensive-goldstine-f0979f.netlify.app/',

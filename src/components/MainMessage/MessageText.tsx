@@ -11,25 +11,34 @@ const Features: React.FC<{ features?: string[] }> = ({ features }) => (
   <>
     <p className="mb-1 font-bold">Features</p>
     <ul className="list-outside list-disc pl-4">
-      {features?.map((feature) => {
-        return <li key={feature}>{feature}</li>;
-      })}
+      {features?.map((feature) => (
+        <li key={feature}>{feature}</li>
+      ))}
     </ul>
   </>
 );
 
-const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => {
-  return (
-    <>
-      <p className="mb-1 font-bold">Concepts</p>
-      <ul className="list-outside list-disc pl-4">
-        {concepts?.map((concept: string) => (
-          <li key={concept}>{concept}</li>
-        ))}
-      </ul>
-    </>
-  );
-};
+const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => (
+  <>
+    <p className="mb-1 font-bold">Concepts</p>
+    <ul className="list-outside list-disc pl-4">
+      {concepts?.map((concept: string) => (
+        <li key={concept}>{concept}</li>
+      ))}
+    </ul>
+  </>
+);
+
+const Tools: React.FC<{ tools?: string[] }> = ({ tools }) => (
+  <>
+    <p className="mb-1 font-bold">Tools</p>
+    <ul className="list-outside list-disc pl-4">
+      {tools?.map((tool: string) => (
+        <li key={tool}>{tool}</li>
+      ))}
+    </ul>
+  </>
+);
 
 const Text: React.FC<{ project: Project }> = ({ project }) =>
   project.keyName !== 'welcome' ? (
@@ -38,11 +47,12 @@ const Text: React.FC<{ project: Project }> = ({ project }) =>
       <Description descriptionText={project.text.description} />
       <Features features={project.text.features} />
       <Concepts concepts={project.text.concepts} />
+      <Tools tools={project.text.tools} />
     </div>
   ) : (
     <Description descriptionText={project.text.description} />
   );
 
-export const MessageText: React.FC<{ project: Project }> = ({ project }) => {
-  return <Text project={project} />;
-};
+export const MessageText: React.FC<{ project: Project }> = ({ project }) => (
+  <Text project={project} />
+);

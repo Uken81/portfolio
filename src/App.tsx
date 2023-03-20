@@ -8,7 +8,7 @@ import './style.css';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectName>('welcome');
-  const welcomeMargin = selectedProject === 'welcome' ? 'lg:mt-56' : null;
+  const welcomeMargin = selectedProject === 'welcome' ? 'sm:mt-64' : null;
 
   return (
     <div className="min-h-screen bg-gray-900 p-6  text-stone-300 sm:px-12 md:px-24 lg:px-36">
