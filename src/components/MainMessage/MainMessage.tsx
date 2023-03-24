@@ -1,29 +1,20 @@
 import { Project, projects } from '../common/projectsList';
 import { MessageText } from './MessageText';
 
-const gradientRight = 'bg-gradient-to-r from-sky-500 to-indigo-500 hover:bg-gradient-to-l';
+const gradientRight = 'bg-gradient-to-r from-red-500 to-yellow-300 hover:bg-gradient-to-l';
 
-const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-t';
-// const gradientBottom2 = 'bg-gradient-to-b from-sky-500 to-indigo-300 hover:bg-gradient-to-l';
+const gradientBottom =
+  'bg-gradient-to-b from-red-500 to-yellow-300 hover:bg-gradient-to-t duration-300';
 
 const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => (
   <div className="mb-6 flex cursor-default flex-col">
     <h1
-      className={`ml-4 ${gradientBottom}
-        xl:text-7l bg-clip-text pb-1 text-4xl font-extrabold text-transparent text-shadow-sm sm:text-5xl  lg:text-6xl`}>
+      className={`xl:text-7l ml-4 bg-clip-text pb-1 text-4xl ${gradientBottom} font-extrabold  text-transparent text-shadow-sm sm:text-5xl  lg:text-6xl`}>
       {title}
     </h1>
-    {/* <h1
-      className={`ml-4 ${gradientBottom2}
-        xl:text-7l bg-clip-text pb-1 text-4xl font-extrabold  text-transparent text-shadow-sm sm:text-5xl  lg:text-6xl`}>
-      {title}
-    </h1> */}
-    {/* <h1
-      className={`xl:text-7l ml-4 bg-gradient-to-t from-red-500
-      to-yellow-300 bg-clip-text pb-1 text-4xl font-extrabold  text-transparent text-shadow-md sm:text-5xl  lg:text-6xl`}>
-      {title}
-    </h1> */}
-    {subtitle && <h2 className="mt-6 ml-5" dangerouslySetInnerHTML={{ __html: subtitle }}></h2>}
+    {subtitle && (
+      <h2 className="mt-6 ml-5 opacity-80" dangerouslySetInnerHTML={{ __html: subtitle }}></h2>
+    )}
   </div>
 );
 
@@ -41,8 +32,8 @@ const Message: React.FC<{
   return (
     <div className="mb-24 flex flex-col">
       <Title title={project.title} subtitle={project.subtitle} />
-      <div className={`max-w-lg ${gradientBottom}`}>
-        <div className="ml-1 cursor-default bg-gray-900 pl-4 text-sm leading-6">
+      <div className={`max-w-lg ${gradientBottom} opacity-80`}>
+        <div className="ml-1 cursor-default bg-gray-900 pl-4 text-sm leading-6 ">
           <MessageText project={project} />
         </div>
         {project.links && (
