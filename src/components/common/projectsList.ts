@@ -39,7 +39,7 @@ export const projects: ProjectObj = {
         'Inbuilt PDF maker to save, print and share'
       ],
       concepts: ['Testing', 'User authentication', 'Global state management'],
-      tools: ['React', 'Typescript', 'Redux', 'sass', 'Jest/RTL', 'Firebase']
+      tools: ['React', 'Typescript', 'Redux Toolkit', 'SCSS', 'Bootstrap', 'Jest/RTL', 'Firebase']
     },
     links: {
       site: 'https://pensive-goldstine-f0979f.netlify.app/',
@@ -52,10 +52,10 @@ export const projects: ProjectObj = {
     title: 'Garden Logger',
     text: {
       description:
-        'The Garden Logger mobile app allows users to record information about their plants and track change over time using multiple sorting functions and views.',
+        'The Garden Logger mobile app allows users to record information about their plants and track changes over time using multiple sorting functions and views.',
       features: [
         'Take photos of your plants to track over time.',
-        'Add notes and tags to monitor growth, disease and pest issues over time.',
+        'Add notes and tags to monitor growth, disease and pest issues.',
         'Create garden areas that can then be categorised, grouped and sorted.',
         'Timeline view, filter by date ranges, tags, location and more.'
       ],
