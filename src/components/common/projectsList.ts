@@ -61,8 +61,8 @@ export const projects: ProjectObj = {
       ],
       concepts: [
         'Git Collaboration',
-        'Global state management',
         'Mobile App Development',
+        'Global state management',
         'Testing'
       ],
       tools: ['React Native', 'Typescript', 'Redux', 'Jest/RTL']
@@ -79,7 +79,7 @@ export const projects: ProjectObj = {
     subtitle: 'I’m Brendan Hurd.<br>Front End Developer | Self Taught | Melbourne, Australia',
     text: {
       description:
-        'I’m passionate about creating high-quality, user-friendly code and am proficient in Typescript and integration testing. I bring curiosity, a love of learning and an obsession with quality to my code and projects.'
+        'I’m passionate about creating high-quality, user-friendly code and am proficient in React, Typescript and integration testing. I bring curiosity, a love of learning and an obsession with quality to my code and projects.'
     }
   }
 };
