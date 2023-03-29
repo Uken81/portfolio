@@ -56,7 +56,7 @@ export const projects: ProjectObj = {
       features: [
         'Take photos of your plants to track over time.',
         'Add notes and tags to monitor growth, disease and pest issues.',
-        'Create garden areas that can then be categorised, grouped and sorted.',
+        'Create garden areas that can be categorised, grouped and sorted.',
         'Timeline view, filter by date ranges, tags, location and more.'
       ],
       concepts: [
