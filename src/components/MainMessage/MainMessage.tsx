@@ -29,6 +29,7 @@ const Link: React.FC<{ linkText: string; linkRef: string }> = ({ linkText, linkR
 const Message: React.FC<{
   project: Project;
 }> = ({ project }) => {
+  const gitLinkMargin = project.keyName === 'garden' ? 'ml-1' : 'ml-8';
   return (
     <div className="mb-24 flex flex-col">
       <Title title={project.title} subtitle={project.subtitle} />
@@ -39,10 +40,10 @@ const Message: React.FC<{
         {project.links && (
           <div className="ml-1 flex max-w-lg bg-gray-900 pl-4 pt-4">
             <div className={`${gradientRight} hover:bg-gradient-to-l`}>
-              <Link linkRef={project.links.site} linkText="View Site" />
+              {project.links.site && <Link linkRef={project.links.site} linkText="View Site" />}
             </div>
-            <div className={`ml-8 ${gradientRight} hover:bg-gradient-to-l`}>
-              <Link linkRef={project.links.github} linkText="GitHub" />
+            <div className={`${gitLinkMargin} ${gradientRight} hover:bg-gradient-to-l`}>
+              <Link linkRef={project.links.github} linkText="GitHub Repo" />
             </div>
           </div>
         )}

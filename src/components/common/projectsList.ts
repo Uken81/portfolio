@@ -6,7 +6,7 @@ interface ProjectObj {
     title: string;
     subtitle?: string;
     text: ProjectText;
-    links?: { site: string; github: string; demo: string };
+    links?: { site?: string; github: string; demo: string };
   };
 }
 
@@ -15,7 +15,7 @@ export interface Project {
   title: string;
   subtitle?: string;
   text: ProjectText;
-  links?: { site: string; github: string; demo: string };
+  links?: { site?: string; github: string; demo: string };
 }
 
 interface ProjectText {
@@ -68,8 +68,7 @@ export const projects: ProjectObj = {
       tools: ['React Native', 'Typescript', 'Redux', 'Jest/RTL']
     },
     links: {
-      site: 'https://pensive-goldstine-f0979f.netlify.app/',
-      github: 'https://github.com/Uken81/GCCM-Redux/tree/main',
+      github: 'https://github.com/Cliffsters-Inc/garden-manager-native',
       demo: 'garden'
     }
   },
