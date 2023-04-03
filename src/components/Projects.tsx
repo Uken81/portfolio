@@ -3,7 +3,6 @@ import { ProjectName, projects } from './common/projectsList';
 const gradientRight = 'bg-gradient-to-r from-red-500 to-yellow-300 hover:bg-gradient-to-l';
 
 const gradientBottom = 'bg-gradient-to-b from-red-500 to-yellow-300 hover:bg-gradient-to-t';
-// const gradientBottom = 'bg-gradient-to-b from-sky-500 to-indigo-500 hover:bg-gradient-to-t';
 
 const Project: React.FC<{
   handleClick: () => void;

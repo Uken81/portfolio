@@ -3,13 +3,14 @@ import { Project } from '../common/projectsList';
 
 const Description: React.FC<{ descriptionText: string }> = ({ descriptionText }) => (
   <>
+    <p className="mb-1 h-8 font-bold">The Project</p>
     <p>{descriptionText}</p>
   </>
 );
 
 const Features: React.FC<{ features?: string[] }> = ({ features }) => (
   <>
-    <p className="mb-1 font-bold">Features</p>
+    <p className="my-1 font-bold">Features</p>
     <ul className="list-outside list-disc pl-4">
       {features?.map((feature) => (
         <li key={feature}>{feature}</li>
@@ -20,7 +21,7 @@ const Features: React.FC<{ features?: string[] }> = ({ features }) => (
 
 const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => (
   <>
-    <p className="mb-1 font-bold">Concepts</p>
+    <p className="my-1 font-bold">Concepts</p>
     <ul className="list-outside list-disc pl-4">
       {concepts?.map((concept: string) => (
         <li key={concept}>{concept}</li>
@@ -31,7 +32,7 @@ const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => (
 
 const Tools: React.FC<{ tools?: string[] }> = ({ tools }) => (
   <>
-    <p className="mb-1 font-bold">Tools</p>
+    <p className="my-1 font-bold">Tools</p>
     <ul className="list-outside list-disc pl-4">
       {tools?.map((tool: string) => (
         <li key={tool}>{tool}</li>
@@ -42,8 +43,7 @@ const Tools: React.FC<{ tools?: string[] }> = ({ tools }) => (
 
 const Text: React.FC<{ project: Project }> = ({ project }) =>
   project.keyName !== 'welcome' ? (
-    <div className="flex h-max flex-col justify-between xl:text-lg">
-      <p className="mb-1 h-8 font-bold">The Project</p>
+    <div className="flex h-max flex-col xl:text-lg">
       <Description descriptionText={project.text.description} />
       <Features features={project.text.features} />
       <Concepts concepts={project.text.concepts} />

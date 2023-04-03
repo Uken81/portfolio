@@ -42,7 +42,7 @@ export const projects: ProjectObj = {
       tools: ['React', 'Typescript', 'Redux Toolkit', 'SCSS', 'Bootstrap', 'Jest/RTL', 'Firebase']
     },
     links: {
-      site: 'https://pensive-goldstine-f0979f.netlify.app/',
+      site: 'https://gccm.brendanhurd.dev',
       github: 'https://github.com/Uken81/GCCM-Redux/tree/main',
       demo: 'gccm'
     }
