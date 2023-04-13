@@ -3,7 +3,6 @@ import { Project } from '../common/projectsList';
 
 const Description: React.FC<{ descriptionText: string }> = ({ descriptionText }) => (
   <>
-    <p className="mb-1 h-8 font-bold">The Project</p>
     <p>{descriptionText}</p>
   </>
 );
@@ -44,6 +43,7 @@ const Tools: React.FC<{ tools?: string[] }> = ({ tools }) => (
 const Text: React.FC<{ project: Project }> = ({ project }) =>
   project.keyName !== 'welcome' ? (
     <div className="flex h-max flex-col xl:text-lg">
+      <p className="mb-1 h-8 font-bold">The Project</p>
       <Description descriptionText={project.text.description} />
       <Features features={project.text.features} />
       <Concepts concepts={project.text.concepts} />
