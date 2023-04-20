@@ -1,4 +1,4 @@
-export type ProjectName = 'gccm' | 'garden' | 'welcome';
+export type ProjectName = 'gccm' | 'garden' | 'chance' | 'welcome';
 
 interface ProjectObj {
   [objectName: string]: {
@@ -70,6 +70,27 @@ export const projects: ProjectObj = {
     links: {
       github: 'https://github.com/Cliffsters-Inc/garden-manager-native',
       demo: 'garden'
+    }
+  },
+  chance: {
+    keyName: 'chance',
+    title: 'Take a Chance',
+    text: {
+      description:
+        'One of my much earlier projects. This simple game of chance is inspired by the browser games of long ago. I used this project to apply some of my first lessons in HTML, JS and CSS.',
+      features: [
+        'Fun intro story',
+        'Choose from multiple difficulties',
+        'Changeable background views',
+        'Select bet amounts and take a chance'
+      ],
+      concepts: ['Random outcome generator', 'CSS animations', 'Ensuring game rlues compliance'],
+      tools: ['HTML', 'Javascript', 'CSS']
+    },
+    links: {
+      site: 'https://takeachance.brendanhurd.dev',
+      github: 'https://github.com/Uken81/Take-a-Chance',
+      demo: ''
     }
   },
   welcome: {
