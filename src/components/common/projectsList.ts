@@ -39,7 +39,7 @@ export const projects: ProjectObj = {
         'Inbuilt PDF maker to save, print and share'
       ],
       concepts: ['Testing', 'User authentication', 'Global state management'],
-      tools: ['React', 'Typescript', 'Redux Toolkit', 'SCSS', 'Bootstrap', 'Jest/RTL', 'Firebase']
+      tools: ['React', 'Typescript', 'Redux Toolkit', 'SASS', 'Bootstrap', 'Jest/RTL', 'Firebase']
     },
     links: {
       site: 'https://gccm.brendanhurd.dev',
