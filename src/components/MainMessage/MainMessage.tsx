@@ -1,10 +1,6 @@
 import { Project, projects } from '../common/projectsList';
 import { MessageText } from './MessageText';
-
-const gradientRight = 'bg-gradient-to-r from-red-500 to-yellow-300 hover:bg-gradient-to-l';
-
-const gradientBottom =
-  'bg-gradient-to-b from-red-500 to-yellow-300 hover:bg-gradient-to-t duration-300';
+import { gradientBottom, gradientRight } from '../common/gradientBackgrounds';
 
 const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => (
   <div className="mb-6 flex cursor-default flex-col">
@@ -21,7 +17,7 @@ const Title: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle
 const Link: React.FC<{ linkText: string; linkRef: string }> = ({ linkText, linkRef }) => (
   <div className="mb-0.5 bg-gray-900">
     <a href={linkRef} target="_blank" rel="noopener noreferrer">
-      <span className="pb-1 hover:text-white">{linkText}</span>
+      <span className="pb-1 duration-300 hover:text-white">{linkText}</span>
     </a>
   </div>
 );
@@ -33,7 +29,7 @@ const Message: React.FC<{
   return (
     <div className="mb-24 flex flex-col">
       <Title title={project.title} subtitle={project.subtitle} />
-      <div className={`max-w-lg ${gradientBottom} opacity-80`}>
+      <div className={`max-w-lg ${gradientBottom} opacity-80 hover:bg-gradient-to-t`}>
         <div className="ml-1 cursor-default bg-gray-900 pl-4 text-sm leading-6 ">
           <MessageText project={project} />
         </div>

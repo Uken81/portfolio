@@ -1,8 +1,5 @@
+import { gradientBottom, gradientRight } from './common/gradientBackgrounds';
 import { ProjectName, projects } from './common/projectsList';
-
-const gradientRight = 'bg-gradient-to-r from-red-500 to-yellow-300 hover:bg-gradient-to-l';
-
-const gradientBottom = 'bg-gradient-to-b from-red-500 to-yellow-300 hover:bg-gradient-to-t';
 
 const Project: React.FC<{
   handleClick: () => void;
@@ -24,7 +21,8 @@ export const Projects: React.FC<{
 
   return (
     <div className="pb-24 lg:ml-auto">
-      <div className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1 opacity-80`}>
+      <div
+        className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1 opacity-80 hover:bg-gradient-to-l`}>
         <div className="flex flex-col  bg-gray-900 pl-4 pt-4">
           <h1
             className={`cursor-default ${gradientBottom} bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl`}>
