@@ -96,7 +96,7 @@ export const projects: ProjectObj = {
   welcome: {
     keyName: 'welcome',
     title: 'Welcome.',
-    subtitle: 'I’m Brendan Hurd.<br>Front End Developer | Self Taught | Melbourne, Australia',
+    subtitle: 'I’m Brendan Hurd.<br>Front End Developer | Melbourne, Australia',
     text: {
       description:
         'I’m passionate about creating high-quality, user-friendly code and am proficient in React, Typescript and integration testing. I bring curiosity, a love of learning and an obsession with quality to my code and projects.'
