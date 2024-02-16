@@ -1,6 +1,7 @@
 import gccmGif from '../assets/demoImages/gccm.gif';
 import gardenGif from '../assets/demoImages/gardenLogger.gif';
 import takeachanceGif from '../assets/demoImages/takeachance.gif';
+import sadboisGif from '../assets/demoImages/Sadbois.gif';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 import { ProjectName } from './common/projectsList';
@@ -12,7 +13,7 @@ export const Demo: React.FC<{
 
   useEffect(() => {
     const images = {
-      sadbois: '',
+      sadbois: sadboisGif,
       gccm: gccmGif,
       garden: gardenGif,
       chance: takeachanceGif,

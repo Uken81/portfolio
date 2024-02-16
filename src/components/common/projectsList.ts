@@ -47,6 +47,11 @@ export const projects: ProjectsObj = {
         'Tailwind CSS',
         'React Context'
       ]
+    },
+    links: {
+      site: 'https://sad-bois.netlify.app',
+      github: 'https://github.com/Uken81/sad-bois',
+      demo: 'sadbois'
     }
   },
   gccm: {
