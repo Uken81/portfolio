@@ -1,6 +1,6 @@
-export type ProjectName = 'gccm' | 'garden' | 'chance' | 'welcome';
+export type ProjectName = 'sadbois' | 'gccm' | 'garden' | 'chance' | 'welcome';
 
-interface ProjectObj {
+interface ProjectsObj {
   [objectName: string]: {
     keyName: ProjectName;
     title: string;
@@ -26,7 +26,29 @@ interface ProjectText {
 }
 
 //When adding more projects with demo gifs add its keyName property to the ProjectName type at the top of this file. Upload the gif file to src/assets/demoImages then import to Demo.tsx. In the same file add the keyName as a new key to the images object and the gif name as the value.
-export const projects: ProjectObj = {
+export const projects: ProjectsObj = {
+  sadbois: {
+    keyName: 'sadbois',
+    title: 'The Sad Bois',
+    text: {
+      description:
+        'A full stack responsive website for a fictional band built with Typescript for the front end and Node.js/Express for the back end.',
+      features: [
+        'Asynchronous fetch requests to communicate between the front-end and server, handles CRUD operations to manage application data',
+        'PostgreSQL database manages and persist information related to Users, Customers, Store Orders, News Articles, and additional entities.',
+        'Cookies facilitating the authentication of registered users, enabling them to access protected pages, view past store orders on their profile page, and more.',
+        'Merchandise that processes order totals and verifies payment card details on the server side.'
+      ],
+      tools: [
+        'Typescript',
+        'Node.js/Express',
+        'PostgreSQL',
+        'MySQL',
+        'Tailwind CSS',
+        'React Context'
+      ]
+    }
+  },
   gccm: {
     keyName: 'gccm',
     title: 'GCCM',

@@ -25,7 +25,10 @@ const Link: React.FC<{ linkText: string; linkRef: string }> = ({ linkText, linkR
 const Message: React.FC<{
   project: Project;
 }> = ({ project }) => {
+  console.log('project', project);
+  console.log('keyName', project.keyName);
   const gitLinkMargin = project.keyName === 'garden' ? 'ml-1' : 'ml-8';
+  console.log('gitLinkMargin', gitLinkMargin);
   return (
     <div className="mb-24 flex flex-col">
       <Title title={project.title} subtitle={project.subtitle} />

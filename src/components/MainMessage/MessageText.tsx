@@ -20,12 +20,16 @@ const Features: React.FC<{ features?: string[] }> = ({ features }) => (
 
 const Concepts: React.FC<{ concepts?: string[] }> = ({ concepts }) => (
   <>
-    <p className="my-1 font-bold">Concepts</p>
-    <ul className="list-outside list-disc pl-4">
-      {concepts?.map((concept: string) => (
-        <li key={concept}>{concept}</li>
-      ))}
-    </ul>
+    {concepts ? (
+      <div>
+        <p className="my-1 font-bold">Concepts</p>
+        <ul className="list-outside list-disc pl-4">
+          {concepts?.map((concept: string) => (
+            <li key={concept}>{concept}</li>
+          ))}
+        </ul>
+      </div>
+    ) : null}
   </>
 );
 

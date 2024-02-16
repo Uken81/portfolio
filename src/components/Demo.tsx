@@ -12,6 +12,7 @@ export const Demo: React.FC<{
 
   useEffect(() => {
     const images = {
+      sadbois: '',
       gccm: gccmGif,
       garden: gardenGif,
       chance: takeachanceGif,
