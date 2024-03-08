@@ -1,5 +1,5 @@
 import { gradientBottom, gradientRight } from './common/gradientBackgrounds';
-import { ProjectName, projects } from './common/projectsList';
+import { ProjectName, projects } from './common/projects';
 
 const Project: React.FC<{
   handleClick: () => void;
@@ -20,7 +20,7 @@ export const Projects: React.FC<{
   const projectList = Object.values(projects).filter((project) => project.keyName !== 'welcome');
 
   return (
-    <div className="pb-24 lg:ml-auto">
+    <div className="hidden pb-24 lg:ml-auto lg:block">
       <div
         className={`flex h-10 w-20 rounded-l ${gradientRight} pl-1 pt-1 opacity-80 hover:bg-gradient-to-l`}>
         <div className="flex flex-col  bg-gray-900 pl-4 pt-4">

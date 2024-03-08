@@ -4,7 +4,7 @@ import takeachanceGif from '../assets/demoImages/takeachance.gif';
 import sadboisGif from '../assets/demoImages/Sadbois.gif';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
-import { ProjectName } from './common/projectsList';
+import { ProjectName } from './common/projects';
 
 export const Demo: React.FC<{
   selectedProject: ProjectName;

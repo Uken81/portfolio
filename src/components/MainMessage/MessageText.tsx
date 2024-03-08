@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../common/projectsList';
+import { Project } from '../common/projects';
 
 const Description: React.FC<{ descriptionText: string }> = ({ descriptionText }) => (
   <>

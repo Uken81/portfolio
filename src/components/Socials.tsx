@@ -1,23 +1,15 @@
-import { AiTwotoneHome } from 'react-icons/ai';
 import { SiGmail } from 'react-icons/si';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
-import { ProjectName } from './common/projectsList';
 
-export const Header: React.FC<{
-  setSelectedProject: React.Dispatch<React.SetStateAction<ProjectName>>;
-}> = ({ setSelectedProject }) => (
-  <div className="mb-6 flex justify-between md:mb-12">
-    <AiTwotoneHome
-      size={'2em'}
-      onClick={() => setSelectedProject('welcome')}
-      className="cursor-pointer duration-300 sm:hover:scale-110"
-      color="white"
-    />
-    <div className="flex ">
+export const Socials: React.FC = () => (
+  <ul className="menu menu-horizontal">
+    <li>
       <a href="mailto:brendanhurd@gmail.com" target="_blank" rel="noopener noreferrer">
         <SiGmail size={'2em'} color={'white'} className="mr-2 duration-300 sm:hover:scale-110" />
       </a>
+    </li>
+    <li>
       <a
         href="https://www.linkedin.com/in/brendan-hurd-36b211259/"
         target="_blank"
@@ -28,6 +20,8 @@ export const Header: React.FC<{
           color={'white'}
         />
       </a>
+    </li>
+    <li>
       <a href="https://github.com/Uken81" target="_blank" rel="noopener noreferrer">
         <GoMarkGithub
           size={'2em'}
@@ -35,6 +29,6 @@ export const Header: React.FC<{
           color={'white'}
         />
       </a>
-    </div>
-  </div>
+    </li>
+  </ul>
 );

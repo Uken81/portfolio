@@ -34,7 +34,7 @@ export const projects: ProjectsObj = {
       description:
         'A full stack responsive website for a fictional band built with Typescript for the front end and Node.js/Express for the back end.',
       features: [
-        'Asynchronous fetch requests to communicate between the front-end and server, handles CRUD operations to manage application data',
+        'Asynchronous fetch requests to communicate between the front-end and server, handles CRUD operations to manage application data.',
         'PostgreSQL database manages and persist information related to Users, Customers, Store Orders, News Articles, and additional entities.',
         'Cookies facilitating the authentication of registered users, enabling them to access protected pages, view past store orders on their profile page, and more.',
         'Merchandise that processes order totals and verifies payment card details on the server side.'

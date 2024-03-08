@@ -1,4 +1,4 @@
-import { Project, projects } from '../common/projectsList';
+import { Project, projects } from '../common/projects';
 import { MessageText } from './MessageText';
 import { gradientBottom, gradientRight } from '../common/gradientBackgrounds';
 
