@@ -26,10 +26,9 @@ export const Navbar: React.FC<{
             <AiTwotoneHome
               size={'2em'}
               onClick={() => setSelectedProject('welcome')}
-              className="cursor-pointer duration-300 sm:hover:scale-110"
+              className="cursor-pointer duration-300 hover:scale-110"
               color="white"
             />
-            H
           </div>
           <div className="hidden flex-none lg:block">
             <Socials />

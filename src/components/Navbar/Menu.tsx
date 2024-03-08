@@ -18,7 +18,7 @@ export const Menu: React.FC<{
       <AiTwotoneHome
         size={'2em'}
         onClick={() => handleSelect('welcome')}
-        className="mb-10"
+        className="mb-10 hover:cursor-pointer"
         color="white"
       />
       <h1 className="text-2xl font-bold">Projects</h1>
@@ -26,7 +26,9 @@ export const Menu: React.FC<{
 
       {projectList.map((item) => (
         <li key={item.keyName} onClick={() => handleSelect(item.keyName)}>
-          <span className="text-lg">{item.title}</span>
+          <span className="text-lg duration-500 hover:tracking-wider hover:text-blue-500">
+            {item.title}
+          </span>
         </li>
       ))}
     </ul>

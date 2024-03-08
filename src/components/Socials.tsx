@@ -6,7 +6,7 @@ export const Socials: React.FC = () => (
   <ul className="menu menu-horizontal">
     <li>
       <a href="mailto:brendanhurd@gmail.com" target="_blank" rel="noopener noreferrer">
-        <SiGmail size={'2em'} color={'white'} className="mr-2 duration-300 sm:hover:scale-110" />
+        <SiGmail size={'2em'} color={'white'} className="mr-2 duration-300 hover:scale-110" />
       </a>
     </li>
     <li>
@@ -16,18 +16,14 @@ export const Socials: React.FC = () => (
         rel="noopener noreferrer">
         <AiOutlineLinkedin
           size={'2em'}
-          className="mr-2 duration-300 sm:hover:scale-110"
+          className="mr-2 duration-300 hover:scale-110"
           color={'white'}
         />
       </a>
     </li>
     <li>
       <a href="https://github.com/Uken81" target="_blank" rel="noopener noreferrer">
-        <GoMarkGithub
-          size={'2em'}
-          className="mr-2 duration-300 sm:hover:scale-110"
-          color={'white'}
-        />
+        <GoMarkGithub size={'2em'} className="mr-2 duration-300 hover:scale-110" color={'white'} />
       </a>
     </li>
   </ul>
