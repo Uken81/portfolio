@@ -3,6 +3,7 @@ import { ProjectName } from '../common/projects';
 import { AiTwotoneHome } from 'react-icons/ai';
 import { Socials } from '../Socials';
 import { Menu } from './Menu';
+import { Hamburger } from './Hamburger';
 
 export const Navbar: React.FC<{
   setSelectedProject: React.Dispatch<SetStateAction<ProjectName>>;
@@ -20,24 +21,7 @@ export const Navbar: React.FC<{
       />
       <div className="drawer-content flex flex-col">
         <div className="navbar flex-1 md:px-12">
-          <div className="flex-none lg:hidden">
-            <label
-              htmlFor="nav"
-              aria-label="open sidebar"
-              className="btn-ghost btn btn-square text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block h-6 w-6 stroke-current">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </label>
-          </div>
+          <Hamburger />
           <div className="mx-2 hidden flex-1 px-2 lg:block">
             <AiTwotoneHome
               size={'2em'}
@@ -45,6 +29,7 @@ export const Navbar: React.FC<{
               className="cursor-pointer duration-300 sm:hover:scale-110"
               color="white"
             />
+            H
           </div>
           <div className="hidden flex-none lg:block">
             <Socials />

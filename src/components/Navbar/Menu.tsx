@@ -8,11 +8,16 @@ export const Menu: React.FC<{
 }> = ({ setSelectedProject, setIsDrawerOpen }) => {
   const projectList = Object.values(projects).filter((project) => project.keyName !== 'welcome');
 
+  const handleSelect = (projectName: ProjectName) => {
+    setSelectedProject(projectName);
+    setIsDrawerOpen(false);
+  };
+
   return (
     <ul className="menu min-h-full w-80 bg-stone-800 p-4 text-white">
       <AiTwotoneHome
         size={'2em'}
-        onClick={() => setSelectedProject('welcome')}
+        onClick={() => handleSelect('welcome')}
         className="mb-10"
         color="white"
       />
@@ -20,10 +25,8 @@ export const Menu: React.FC<{
       <div className="divider divider-warning" />
 
       {projectList.map((item) => (
-        <li key={item.keyName} onClick={() => setIsDrawerOpen(false)}>
-          <span className="text-lg" onClick={() => setSelectedProject(item.keyName)}>
-            {item.title}
-          </span>
+        <li key={item.keyName} onClick={() => handleSelect(item.keyName)}>
+          <span className="text-lg">{item.title}</span>
         </li>
       ))}
     </ul>
