@@ -9,12 +9,12 @@ import { Navbar } from './components/Navbar/Navbar';
 function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectName>('welcome');
 
-  const welcomeMargin = selectedProject === 'welcome' ? 'sm:mt-64' : null;
+  const welcomeMargin = selectedProject === 'welcome' ? 'mt-48' : null;
 
   return (
     <main className="min-h-screen bg-gray-900 ">
       <Navbar setSelectedProject={setSelectedProject}>
-        <div className="p-6  text-stone-300 sm:px-12 md:px-24 lg:px-36">
+        <div className="p-6 text-stone-300 sm:px-12 md:px-24 lg:px-36">
           <Demo selectedProject={selectedProject} />
           <div className={`${welcomeMargin} lg:flex lg:px-10 xl:px-36 2xl:max-w-[90rem] 2xl:px-64`}>
             <MainMessage selectedProject={selectedProject} />
